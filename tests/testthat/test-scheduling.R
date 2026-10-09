@@ -1,0 +1,3 @@
+test_that("booking occupies and cancellation releases slot",{
+  s<-seed_store();tx<-book_appointment(s,"pat-001","Salud Completa","loc-sur","hs-cardio-sur","role-fonseca-cardio","slot-cardio-20261007-0800","control-specialist","web");expect_true(tx$success);expect_equal(state_resource(s(),"Slot","slot-cardio-20261007-0800")$status,"busy");a<-state_resource(s(),"Appointment",tx$appointment_id);expect_equal(a$status,"booked");cx<-cancel_appointment(s,tx$appointment_id);expect_true(cx$success);expect_equal(state_resource(s(),"Appointment",tx$appointment_id)$status,"cancelled");expect_equal(state_resource(s(),"Slot","slot-cardio-20261007-0800")$status,"free")
+})

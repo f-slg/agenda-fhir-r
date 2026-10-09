@@ -1,0 +1,35 @@
+# R / RStudio local state
+.Rproj.user/
+.Rhistory
+.RData
+.Ruserdata
+.Renviron
+.Renviron.*
+!.Renviron.example
+
+# Credentials and environment files
+.env
+.env.*
+!.env.example
+*.pem
+*.key
+
+# Deployment configuration is local to each contributor
+rsconnect/
+
+# Editor / operating-system files
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
+*~
+
+# Local assistant configuration
+.agents/
+.codex/
+.aws/
+
+# Generated diagnostics and archives
+*.log
+*.zip
+*.tar.gz

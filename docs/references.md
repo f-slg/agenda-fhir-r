@@ -1,0 +1,24 @@
+# Referencias oficiales
+
+- HL7 FHIR R4 4.0.1: https://hl7.org/fhir/R4/
+- Patient: https://hl7.org/fhir/R4/patient.html
+- Organization: https://hl7.org/fhir/R4/organization.html
+- Coverage: https://hl7.org/fhir/R4/coverage.html
+- Location: https://hl7.org/fhir/R4/location.html
+- HealthcareService: https://hl7.org/fhir/R4/healthcareservice.html
+- Practitioner: https://hl7.org/fhir/R4/practitioner.html
+- PractitionerRole: https://hl7.org/fhir/R4/practitionerrole.html
+- Schedule: https://hl7.org/fhir/R4/schedule.html
+- Slot: https://hl7.org/fhir/R4/slot.html
+- Appointment: https://hl7.org/fhir/R4/appointment.html
+- AppointmentResponse: https://hl7.org/fhir/R4/appointmentresponse.html
+- Encounter: https://hl7.org/fhir/R4/encounter.html
+- Observation: https://hl7.org/fhir/R4/observation.html
+- Condition: https://hl7.org/fhir/R4/condition.html
+- ServiceRequest: https://hl7.org/fhir/R4/servicerequest.html
+- CarePlan: https://hl7.org/fhir/R4/careplan.html
+- Bundle: https://hl7.org/fhir/R4/bundle.html
+- Provenance: https://hl7.org/fhir/R4/provenance.html
+- AuditEvent: https://hl7.org/fhir/R4/auditevent.html
+- OperationOutcome: https://hl7.org/fhir/R4/operationoutcome.html
+- Google Gemini generateContent API: https://ai.google.dev/api/generate-content

@@ -1,12 +1,26 @@
-# Agenda FHIR — Prototipo en R/Shiny
+<p align="center">
+  <img src="www/hl7-fhir-logo.png" width="130" alt="HL7 FHIR">
+</p>
 
-**FHIR TEAM · FHIR Clinical Flow**
+<h1 align="center">Agenda FHIR</h1>
+<p align="center"><strong>FHIR TEAM · Prototipo educativo en R y Shiny</strong></p>
+<p align="center">De la disponibilidad a la atención clínica, con recursos HL7 FHIR R4.</p>
+<p align="center">
+  <a href="#qué-permite-hacer">Funcionalidades</a> ·
+  <a href="#ejecutar-localmente">Instalación</a> ·
+  <a href="#recorrido-sugerido">Demostración</a> ·
+  <a href="#documentación">Documentación</a>
+</p>
+
+---
 
 Prototipo educativo que conecta la reserva de citas, la gestión de agendas y el registro de una atención clínica utilizando recursos **HL7 FHIR R4 (4.0.1)** y un repositorio simulado en memoria.
 
 El paciente, el agendador y el profesional consultan el mismo estado dentro de una sesión de la aplicación. La información puede inspeccionarse como JSON, referencias entre recursos, transacciones e historial.
 
-![Interfaz del prototipo](docs/qa-startup/directory-home.png)
+### Un recorrido clínico conectado
+
+![Inicio de Agenda FHIR con la identidad de FHIR TEAM](docs/qa-startup/directory-home.png)
 
 > Usa exclusivamente datos sintéticos. Es una demostración técnica; no es un sistema para atención clínica real ni un servidor FHIR productivo.
 
@@ -31,7 +45,11 @@ El paciente, el agendador y el profesional consultan el mismo estado dentro de u
 
 El calendario es una representación de los recursos; no constituye otra base de datos.
 
-![Agenda semanal](docs/qa-startup/directory-agenda.png)
+### Agenda semanal
+
+Disponibilidad, reservas y estados de las citas en una misma vista.
+
+![Agenda semanal del prototipo Agenda FHIR](docs/qa-startup/directory-agenda.png)
 
 ## Ejecutar localmente
 

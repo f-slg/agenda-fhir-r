@@ -1,0 +1,122 @@
+[
+  {
+    "mode": "object",
+    "width": 1920,
+    "height": 1080,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "object",
+    "width": 1600,
+    "height": 900,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "object",
+    "width": 1440,
+    "height": 900,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "object",
+    "width": 1366,
+    "height": 768,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "object",
+    "width": 1280,
+    "height": 800,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "object",
+    "width": 1024,
+    "height": 768,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "object",
+    "check": "inline JS, clipboard and HTTP resources",
+    "pass": true,
+    "errors": []
+  },
+  {
+    "mode": "directory",
+    "width": 1920,
+    "height": 1080,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "directory",
+    "width": 1600,
+    "height": 900,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "directory",
+    "width": 1440,
+    "height": 900,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "directory",
+    "width": 1366,
+    "height": 768,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "directory",
+    "width": 1280,
+    "height": 800,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "directory",
+    "width": 1024,
+    "height": 768,
+    "grid": "grid",
+    "brand": "rgb(25, 59, 88)",
+    "overflow": false,
+    "pass": true
+  },
+  {
+    "mode": "directory",
+    "check": "inline JS, clipboard and HTTP resources",
+    "pass": true,
+    "errors": []
+  }
+]

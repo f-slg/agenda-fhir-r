@@ -1,0 +1,14 @@
+[
+  {
+    "id": "org-acme",
+    "name": "ACME Salud"
+  },
+  {
+    "id": "org-salud-completa",
+    "name": "Salud Completa"
+  },
+  {
+    "id": "org-salud-cooperativa",
+    "name": "Salud Cooperativa"
+  }
+]

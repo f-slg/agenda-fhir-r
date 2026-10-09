@@ -1,0 +1,26 @@
+[
+  {
+    "location": "Sede Norte",
+    "services": [
+      "Medicina general",
+      "Pediatría",
+      "Obstetricia"
+    ]
+  },
+  {
+    "location": "Sede Centro",
+    "services": [
+      "Medicina general",
+      "Nefrología",
+      "Gastroenterología"
+    ]
+  },
+  {
+    "location": "Sede Sur",
+    "services": [
+      "Medicina general",
+      "Oncología",
+      "Cardiología"
+    ]
+  }
+]
