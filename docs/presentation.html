@@ -1,0 +1,24 @@
+<!doctype html><html lang="es"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>FHIR Clinical Flow</title><style>body{margin:0;font-family:Inter,Segoe UI,Arial;background:#111827;color:#172033}.slide{width:calc(100vw - 80px);height:calc(100vh - 80px);margin:40px;background:white;box-sizing:border-box;padding:7vh 7vw;display:none;position:relative}.slide.active{display:block}.kicker{color:#1457A6;font-weight:700;letter-spacing:.08em}.slide h1{font-size:4vw;margin:.2em 0}.slide h2{font-size:3vw}.slide p,.slide li{font-size:1.55vw;line-height:1.5}.flow{font-family:ui-monospace,monospace;background:#F5F8FB;border:1px solid #DCE3EA;padding:2vw;white-space:pre-wrap}.n{position:absolute;right:4vw;bottom:3vh;color:#64748B}.tag{display:inline-block;border:1px solid #B9D2F3;background:#EFF6FF;padding:.35em .7em;border-radius:999px;margin-right:.4em;font-size:1.1vw}</style></head><body><div id="deck"></div><script>
+const slides=[
+['FHIR Clinical Flow','De una agenda fragmentada a un contrato interoperable','FHIR R4 · Simulated FHIR Core · Synthetic Data Only'],
+['El problema','ACME Salud opera tres puntos de atención y múltiples canales. El riesgo no es solo la duplicación de interfaces: es la duplicación del estado.',''],
+['La decisión','FHIR será el modelo de estado compartido, no un formato decorativo al final del proceso.',''],
+['Modelo común','Organization → Location → HealthcareService → PractitionerRole → Schedule → Slot → Appointment',''],
+['Disponibilidad','Schedule define a quién/qué pertenece la agenda. Slot representa cada intervalo realmente reservable.',''],
+['Cobertura','Patient ← Coverage → Organization. La aseguradora y el tipo de consulta gobiernan la duración.',''],
+['Reserva transaccional','PUT Slot + POST Appointment + POST AppointmentResponse + POST Provenance','Bundle.type = transaction'],
+['Interoperabilidad entre canales','Portal Paciente, Call Center, HIS y móvil comparten el mismo Store y el mismo Appointment.',''],
+['Portal Paciente','Lenguaje clínico-administrativo; la complejidad FHIR permanece detrás del flujo.',''],
+['Consola Agendador','Vista operativa del mismo estado: crear, cancelar, revisar canal y disponibilidad.',''],
+['Portal Clínico','Appointment planifica; Encounter documenta que la atención ocurrió.',''],
+['Signos vitales','Observation + LOINC + UCUM; presión arterial mediante components.',''],
+['FHIR Studio','Resources · JSON · Graph · REST Trace · Validation · History · Audit · Architecture',''],
+['Trazabilidad','Provenance explica de dónde surgió el dato. Audit registra la operación simulada.',''],
+['IA asistida','Recuperación FHIR local → Gemini opcional → propuesta → revisión humana → mapeo FHIR','Nunca IA → Store directamente'],
+['Arquitectura actual','R/Shiny → Simulated FHIR Core → recursos/versiones/transacciones',''],
+['Arquitectura objetivo','Web/Mobile/HIS → API/BFF → FHIR Server R4 → Database',''],
+['Limitaciones','No HAPI FHIR, no SMART real, no OAuth real, no persistencia productiva. El alcance es educativo y demostrativo.',''],
+['Roadmap','Sustituir el Store simulado por servidor FHIR real; terminología; autenticación; persistencia; perfiles/IG.',''],
+['Conclusión','Las interfaces cambian. El contrato interoperable permanece.','']];
+const deck=document.getElementById('deck');slides.forEach((s,i)=>{const d=document.createElement('section');d.className='slide'+(i===0?' active':'');d.innerHTML=`<div class="kicker">FHIR CAMP · ACME SALUD</div><h1>${s[0]}</h1><p>${s[1]}</p>${s[2]?`<div class="tag">${s[2]}</div>`:''}<div class="n">${i+1}/${slides.length}</div>`;deck.appendChild(d)});let i=0;function show(n){document.querySelectorAll('.slide').forEach(x=>x.classList.remove('active'));i=(n+slides.length)%slides.length;document.querySelectorAll('.slide')[i].classList.add('active')}document.addEventListener('keydown',e=>{if(['ArrowRight',' ','PageDown'].includes(e.key))show(i+1);if(['ArrowLeft','PageUp'].includes(e.key))show(i-1)});
+</script></body></html>

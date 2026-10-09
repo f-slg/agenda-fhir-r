@@ -1,0 +1,255 @@
+{
+  "modified": [
+    {
+      "file": "R/ui.R",
+      "before_sha256": "f1b7e2bccb527d023e6de7e39bc4cf96ee99b5a94ad008a1b542d5fcb9929619",
+      "after_sha256": "8e0196791d3153c71f41c44af152b86c503066cc18290f825b8220ef231073e7"
+    },
+    {
+      "file": "R/utils.R",
+      "before_sha256": "29f5d9e1b1b36c5851a916cbbea9c86cac173e3d3e7718116e45838c2288139d",
+      "after_sha256": "e642915117fd01eb27ed51c494b2ae13afb97b4a6472cb5853c2cf81966801bd"
+    },
+    {
+      "file": "modules/mod_ai_copilot.R",
+      "before_sha256": "3afecbe9042ffa8db14cc45a19e215b67b53aef3c5d7214e00308a3c4d023353",
+      "after_sha256": "8f81504a1683539e3bdb83488234c5cc940f0b1d71f71bfc33b6bde004517dee"
+    },
+    {
+      "file": "modules/mod_audit.R",
+      "before_sha256": "6e8a5d0cda4974797f9e18c235d69a4daa433a0cd2680efd070ac745a26a7629",
+      "after_sha256": "f6aa21f4cf1a5f3f00d18dc9f903d316b03fb872b63d6f82e31260d15fbfa481"
+    },
+    {
+      "file": "modules/mod_clinician.R",
+      "before_sha256": "c716c997e82d50d2a706aae0be90be6f35a86d1fbd5a6efbaf32234a81e7da51",
+      "after_sha256": "33ceb18778dca2959fd003550b35f222a8ef13a5b74ecf9079143e387c423077"
+    },
+    {
+      "file": "modules/mod_json_viewer.R",
+      "before_sha256": "1812e738aab6789d365bc27195c1aba874757f9a6e5b9f28a6f8bd4164a2b795",
+      "after_sha256": "d7998b3ffaebfc27916f8098e39755de07e971ce84130738dea5a23a2f9291de"
+    },
+    {
+      "file": "modules/mod_patient_portal.R",
+      "before_sha256": "fb1b2185dbd42816708efa4fb2e9cb62301feddf84d00651b6d2cd5692c9cb0c",
+      "after_sha256": "5d7d7349fcb5481cbd63ac59fed0ea8220ef8732314cca039cc4d97f87ae8326"
+    },
+    {
+      "file": "modules/mod_resource_explorer.R",
+      "before_sha256": "0d6d37a0dbada85137f16d6ac71ae8078cdf8321be3cb7434c19c8456a5fd030",
+      "after_sha256": "6e0464deaae3b5d552b92b410e2e4bbb7b0481c0f91ceaa7026be3a1e899dc97"
+    },
+    {
+      "file": "modules/mod_rest_trace.R",
+      "before_sha256": "fb98c007863ea0e331c0db006ab9a976338f96946c3fecbbcba685eaf08fceaa",
+      "after_sha256": "cbc76a3c83e13ef1cb6d7bbe0a4a009be00fbc21441d978662cd154e853e6bc9"
+    },
+    {
+      "file": "modules/mod_scheduler.R",
+      "before_sha256": "6a303df671f628e29265c3fca0745a386dc433a1e4b4875493b7dc2e44f07e23",
+      "after_sha256": "a16bfbe6be98b71e7355002571a7fcd79c53a644d7c277303fd5bde850372b90"
+    },
+    {
+      "file": "scripts/01_preflight.R",
+      "before_sha256": "8c3d6fde1d5f4206a9d245a180d44b10ca37cc895ade2230a29d2fcd46a7fb03",
+      "after_sha256": "8a245867402445d6d1009d189c5a53e2d70af5f926381606d3da4b5016e6791d"
+    },
+    {
+      "file": "scripts/03_tests.R",
+      "before_sha256": "f50138d7d6e78d4a323655f5e49fabdbdc2ee2b7a58c44036511cad57d150f7e",
+      "after_sha256": "2c9843851404266189798d8d95e664e496120d29d4e7cbbaa74347b058fae12f"
+    },
+    {
+      "file": "tests/testthat/helper-load.R",
+      "before_sha256": "01b420111f057de1321ad3e55a23cddb48e51eb90135d14d778dea965f6b9809",
+      "after_sha256": "8ee7ee9a7368e12f407c6d221091646e8e9ef09f798fcd36bf399f5e71253733"
+    },
+    {
+      "file": "tests/testthat.R",
+      "before_sha256": "5ad5c751475365391526280da5a934b455651a991ef954e25db501886469b1a1",
+      "after_sha256": "69004a935c304657a8fab569eb210a2bd1b3dbe77642036dd79f34c1ae14dea9"
+    },
+    {
+      "file": "www/app.css",
+      "before_sha256": "86312c4d1d76a63914d508f2f30ac11e54ce8628a9c5911b760a07fac3c2fde3",
+      "after_sha256": "de179f9ac4c55fbc85bd21274eeb6462849a38e5a53e57585e038def3ff2eb70"
+    }
+  ],
+  "added": [
+    "docs/ISSUES_PREEXISTENTES.md",
+    "docs/QA_RESPONSIVE.md",
+    "docs/RESPONSIVE_UI.md",
+    "docs/qa-responsive/1024-agenda.png",
+    "docs/qa-responsive/1024-clinico.png",
+    "docs/qa-responsive/1024-copilot.png",
+    "docs/qa-responsive/1024-home.png",
+    "docs/qa-responsive/1024-json.png",
+    "docs/qa-responsive/1024-paciente.png",
+    "docs/qa-responsive/1024-studio-architecture.png",
+    "docs/qa-responsive/1024-studio-audit.png",
+    "docs/qa-responsive/1024-studio-capability.png",
+    "docs/qa-responsive/1024-studio-graph.png",
+    "docs/qa-responsive/1024-studio-history.png",
+    "docs/qa-responsive/1024-studio-rest-trace.png",
+    "docs/qa-responsive/1024-studio-transactions.png",
+    "docs/qa-responsive/1024-studio-validation.png",
+    "docs/qa-responsive/1024-studio.png",
+    "docs/qa-responsive/1280-agenda.png",
+    "docs/qa-responsive/1280-clinico.png",
+    "docs/qa-responsive/1280-copilot.png",
+    "docs/qa-responsive/1280-home.png",
+    "docs/qa-responsive/1280-json.png",
+    "docs/qa-responsive/1280-paciente.png",
+    "docs/qa-responsive/1280-studio-architecture.png",
+    "docs/qa-responsive/1280-studio-audit.png",
+    "docs/qa-responsive/1280-studio-capability.png",
+    "docs/qa-responsive/1280-studio-graph.png",
+    "docs/qa-responsive/1280-studio-history.png",
+    "docs/qa-responsive/1280-studio-rest-trace.png",
+    "docs/qa-responsive/1280-studio-transactions.png",
+    "docs/qa-responsive/1280-studio-validation.png",
+    "docs/qa-responsive/1280-studio.png",
+    "docs/qa-responsive/1366-agenda.png",
+    "docs/qa-responsive/1366-atencion-finalizada.png",
+    "docs/qa-responsive/1366-clinico.png",
+    "docs/qa-responsive/1366-copilot.png",
+    "docs/qa-responsive/1366-home.png",
+    "docs/qa-responsive/1366-json.png",
+    "docs/qa-responsive/1366-paciente.png",
+    "docs/qa-responsive/1366-reserva-confirmada.png",
+    "docs/qa-responsive/1366-studio-architecture.png",
+    "docs/qa-responsive/1366-studio-audit.png",
+    "docs/qa-responsive/1366-studio-capability.png",
+    "docs/qa-responsive/1366-studio-graph.png",
+    "docs/qa-responsive/1366-studio-history.png",
+    "docs/qa-responsive/1366-studio-rest-trace.png",
+    "docs/qa-responsive/1366-studio-transactions.png",
+    "docs/qa-responsive/1366-studio-validation.png",
+    "docs/qa-responsive/1366-studio.png",
+    "docs/qa-responsive/1440-agenda.png",
+    "docs/qa-responsive/1440-clinico.png",
+    "docs/qa-responsive/1440-copilot.png",
+    "docs/qa-responsive/1440-home.png",
+    "docs/qa-responsive/1440-json.png",
+    "docs/qa-responsive/1440-paciente.png",
+    "docs/qa-responsive/1440-studio-architecture.png",
+    "docs/qa-responsive/1440-studio-audit.png",
+    "docs/qa-responsive/1440-studio-capability.png",
+    "docs/qa-responsive/1440-studio-graph.png",
+    "docs/qa-responsive/1440-studio-history.png",
+    "docs/qa-responsive/1440-studio-rest-trace.png",
+    "docs/qa-responsive/1440-studio-transactions.png",
+    "docs/qa-responsive/1440-studio-validation.png",
+    "docs/qa-responsive/1440-studio.png",
+    "docs/qa-responsive/1600-agenda.png",
+    "docs/qa-responsive/1600-clinico.png",
+    "docs/qa-responsive/1600-copilot.png",
+    "docs/qa-responsive/1600-home.png",
+    "docs/qa-responsive/1600-json.png",
+    "docs/qa-responsive/1600-paciente.png",
+    "docs/qa-responsive/1600-studio-architecture.png",
+    "docs/qa-responsive/1600-studio-audit.png",
+    "docs/qa-responsive/1600-studio-capability.png",
+    "docs/qa-responsive/1600-studio-graph.png",
+    "docs/qa-responsive/1600-studio-history.png",
+    "docs/qa-responsive/1600-studio-rest-trace.png",
+    "docs/qa-responsive/1600-studio-transactions.png",
+    "docs/qa-responsive/1600-studio-validation.png",
+    "docs/qa-responsive/1600-studio.png",
+    "docs/qa-responsive/1920-agenda.png",
+    "docs/qa-responsive/1920-clinico.png",
+    "docs/qa-responsive/1920-copilot.png",
+    "docs/qa-responsive/1920-home.png",
+    "docs/qa-responsive/1920-json.png",
+    "docs/qa-responsive/1920-paciente.png",
+    "docs/qa-responsive/1920-studio-architecture.png",
+    "docs/qa-responsive/1920-studio-audit.png",
+    "docs/qa-responsive/1920-studio-capability.png",
+    "docs/qa-responsive/1920-studio-graph.png",
+    "docs/qa-responsive/1920-studio-history.png",
+    "docs/qa-responsive/1920-studio-rest-trace.png",
+    "docs/qa-responsive/1920-studio-transactions.png",
+    "docs/qa-responsive/1920-studio-validation.png",
+    "docs/qa-responsive/1920-studio.png",
+    "docs/qa-responsive/calendar-stress.html",
+    "docs/qa-responsive/core-integrity.json",
+    "docs/qa-responsive/index.html",
+    "docs/qa-responsive/interactions.json",
+    "docs/qa-responsive/measurements.json",
+    "docs/qa-responsive/preflight.log",
+    "docs/qa-responsive/tests.log",
+    "scripts/04_visual_qa.cjs",
+    "scripts/05_calendar_fixture.R",
+    "scripts/06_interaction_qa.cjs",
+    "tests/testthat/test-ui-layout.R",
+    "www/ui.js",
+    "tests/testthat/test-ui-assets.R",
+    "scripts/07_startup_qa.cjs",
+    "docs/qa-startup/directory-agenda.png",
+    "docs/qa-startup/object-agenda.png",
+    "docs/qa-startup/directory-home.png",
+    "docs/qa-startup/results.json",
+    "docs/qa-startup/object-home.png",
+    "www/hl7-fhir-logo.png",
+    "docs/qa-startup/fhir-team-header.png"
+  ],
+  "removed": [],
+  "note": "El propio docs/CHANGE_MANIFEST.json es un archivo nuevo y se excluye de su inventario.",
+  "revisions": [
+    {
+      "description": "Fix CSS/JS loading for sourced Shiny app objects",
+      "files": [
+        {
+          "file": "R/ui.R",
+          "sha256": "8fbd573f96ce153497a511ee6336d5b4b8c639fb138ad660f5514b1fec162a42"
+        },
+        {
+          "file": "scripts/04_visual_qa.cjs",
+          "sha256": "d7c4f04c88a8ad09605ab67d164f0573cf21c75285fcd36927a3b88acde520c1"
+        },
+        {
+          "file": "tests/testthat/test-ui-assets.R",
+          "sha256": "133752f58c8fcab13371fb658f85a298c7f489dc1998812859976b262b9b0108"
+        },
+        {
+          "file": "scripts/07_startup_qa.cjs",
+          "sha256": "96737b57b76b3a5f609ee586d4f79ba38837c708655100a18159726c861b5e8a"
+        },
+        {
+          "file": "docs/RESPONSIVE_UI.md",
+          "sha256": "033adf8b468d0adc093680577395025ef6ba2b139f39cdd719aaac3da1b56a0c"
+        },
+        {
+          "file": "docs/QA_RESPONSIVE.md",
+          "sha256": "9e99235654ca0c7dd6a3c267ffdf3e52e97358337d6d0ee14e1c3beb0b05c6f9"
+        }
+      ]
+    },
+    {
+      "description": "Logo HL7 FHIR adjunto y nombre FHIR TEAM en navegación",
+      "files": [
+        {
+          "file": "R/ui.R",
+          "sha256": "8e0196791d3153c71f41c44af152b86c503066cc18290f825b8220ef231073e7"
+        },
+        {
+          "file": "www/app.css",
+          "sha256": "de179f9ac4c55fbc85bd21274eeb6462849a38e5a53e57585e038def3ff2eb70"
+        },
+        {
+          "file": "scripts/07_startup_qa.cjs",
+          "sha256": "d0c7e9b9493a8738529ef71d5178dbb07ec072066cc4284ad23e68fabfdca5fb"
+        },
+        {
+          "file": "www/hl7-fhir-logo.png",
+          "sha256": "5008521d0da65956954ae077b57d21d3e971942b14842f5e14ec6614aa8b4918"
+        },
+        {
+          "file": "docs/qa-startup/fhir-team-header.png",
+          "sha256": "ffa0089fdff2cc8930479df4722b852e14b3ee95d20e179a0ed4dc2c3b55b592"
+        }
+      ]
+    }
+  ]
+}

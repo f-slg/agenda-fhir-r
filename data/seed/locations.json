@@ -1,0 +1,17 @@
+[
+  {
+    "id": "loc-norte",
+    "name": "Sede Norte",
+    "sourceIdentifier": "1100155555-1"
+  },
+  {
+    "id": "loc-centro",
+    "name": "Sede Centro",
+    "sourceIdentifier": "1100155555-2"
+  },
+  {
+    "id": "loc-sur",
+    "name": "Sede Sur",
+    "sourceIdentifier": "1100155555-2"
+  }
+]

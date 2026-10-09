@@ -1,0 +1,38 @@
+[
+  {
+    "id": "prac-casas",
+    "name": "Gregorio Casas",
+    "license": "111222333",
+    "specialty": "Pediatría"
+  },
+  {
+    "id": "prac-luna",
+    "name": "Elmer Luna",
+    "license": "222333444",
+    "specialty": "Gineco Obstetricia"
+  },
+  {
+    "id": "prac-chavez",
+    "name": "Luis Manuel Chávez",
+    "license": "333444555",
+    "specialty": "Nefrología"
+  },
+  {
+    "id": "prac-silva",
+    "name": "Álvaro Silva",
+    "license": "444777333",
+    "specialty": "Gastroenterología"
+  },
+  {
+    "id": "prac-narvaez",
+    "name": "Diego Narváez",
+    "license": "555222999",
+    "specialty": "Oncología"
+  },
+  {
+    "id": "prac-fonseca",
+    "name": "Alonso Fonseca",
+    "license": "777666555",
+    "specialty": "Cardiología"
+  }
+]

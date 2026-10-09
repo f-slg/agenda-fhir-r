@@ -1,0 +1,9 @@
+[
+  {
+    "id": "pat-001",
+    "name": "Carlos Andrade",
+    "birthDate": "1974-03-12",
+    "identifier": "ACME-0001",
+    "coverage": "Salud Completa"
+  }
+]

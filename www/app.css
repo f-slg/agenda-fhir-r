@@ -1,0 +1,210 @@
+/* FHIR Clinical Flow — shared desktop design system. No data or business rules. */
+/* 1. Tokens */
+:root {
+  --color-brand:#175fba; --color-brand-hover:#104a94; --color-brand-subtle:#edf4ff;
+  --color-navy:#193b58; --color-teal:#176e65; --color-teal-subtle:#eaf6f3;
+  --color-surface:#fff; --color-surface-alt:#f3f6f9; --color-border:#d5dee7;
+  --color-text:#243748; --color-text-muted:#56697b;
+  --color-success:#236943; --color-success-subtle:#edf7f0;
+  --color-warning:#805600; --color-warning-subtle:#fff5df;
+  --color-danger:#ab3041; --color-danger-subtle:#fff0f2; --color-info:var(--color-brand);
+  --color-code:#152738; --color-code-text:#e0eaf3;
+  --radius-sm:6px; --radius-md:8px; --radius-lg:12px;
+  --shadow-sm:0 1px 3px rgba(25,59,88,.05); --shadow-md:0 4px 14px rgba(25,59,88,.08);
+  --space-1:4px; --space-2:8px; --space-3:12px; --space-4:16px; --space-5:24px; --space-6:32px;
+}
+/* 2. Base and intrinsic sizing */
+*,*::before,*::after {box-sizing:border-box}
+html,body {background:var(--color-surface-alt);color:var(--color-text)}
+body {font-family:"Segoe UI",Inter,Arial,sans-serif;font-size:14px;line-height:1.45}
+h1,h2,h3,h4 {color:var(--color-navy);font-weight:650;line-height:1.2}
+h1 {font-size:32px} h2 {font-size:28px} h3 {font-size:22px} h4 {font-size:18px}
+p,code,strong,small,label {overflow-wrap:anywhere}
+small,.small {font-size:12px}
+pre,code {font-family:Consolas,"Liberation Mono",monospace;font-size:13px}
+pre {max-width:100%;overflow:auto}
+a {color:var(--color-brand)}
+:focus-visible {outline:3px solid var(--color-brand);outline-offset:3px}
+:is(.tab-content,.tab-pane,.card,.card-body,.bslib-grid,.shiny-html-output,.html-widget,.responsive-grid)>* {min-width:0}
+:is(.tab-content,.tab-pane,.card,.card-body,.bslib-grid,.shiny-html-output,.html-widget) {min-width:0;max-width:100%}
+/* 3. Document shell and shared grids: height follows content, scrolling stays local. */
+body>.container-fluid {width:100%;max-width:1600px;margin-inline:auto;padding:0 clamp(16px,2vw,32px) 24px}
+.responsive-grid {display:grid;gap:var(--space-4);align-items:start}
+.booking-layout {grid-template-columns:minmax(280px,1fr) minmax(0,2fr)}
+.request-layout {grid-template-columns:minmax(280px,5fr) minmax(0,7fr)}
+.inspector-layout {grid-template-columns:minmax(0,1fr) minmax(280px,320px)}
+.form-layout {grid-template-columns:repeat(2,minmax(0,1fr))}
+.page-heading {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:16px;margin:24px 0 16px}
+.page-heading h2 {margin:0 0 6px}.page-heading p {margin:0;color:var(--color-text-muted);max-width:780px}
+.page-kicker,.eyebrow {font-size:12px;letter-spacing:.06em;font-weight:650;color:var(--color-brand);margin-bottom:6px}
+.page-actions,.review-actions,.clinical-action-row {display:flex;flex-wrap:wrap;align-items:center;gap:8px}
+.page-actions {margin-left:auto}.clinical-action-row {justify-content:flex-end;margin:16px 0}
+.app-footer {padding:16px 0;margin-top:24px;border-top:1px solid var(--color-border);color:var(--color-text-muted);font-size:12px}
+/* 4. Navigation */
+.navbar {background:var(--color-surface);border-bottom:1px solid var(--color-border);min-height:64px;padding:8px 16px}
+.navbar>.container-fluid {max-width:1600px;gap:12px}
+.navbar-brand {font-size:16px;margin-right:16px;white-space:normal}
+.brand {display:flex;align-items:center;gap:10px;color:var(--color-navy);font-weight:650}
+.brand-logo {display:block;height:40px;width:auto;flex:none;object-fit:contain}
+.navbar .nav-link {font-size:14px;font-weight:600;color:var(--color-text-muted);padding:10px;border-radius:6px;white-space:nowrap}
+.navbar .nav-link:hover,.nav-tabs .nav-link:hover {background:var(--color-surface-alt);color:var(--color-brand)}
+.navbar .nav-link.active {color:var(--color-brand-hover);background:var(--color-brand-subtle)}
+.demo-strip {display:flex;flex-wrap:wrap;gap:8px;padding:12px 0;color:var(--color-text-muted);font-size:12px}
+.demo-strip span {padding:3px 8px;border:1px solid var(--color-border);border-radius:6px;background:var(--color-surface)}
+.nav-tabs {gap:4px;padding:8px 8px 0;border-bottom:1px solid var(--color-border);flex-wrap:wrap;background:var(--color-surface-alt)}
+.nav-tabs .nav-link {font-size:13px;color:var(--color-text-muted);border:0;border-radius:6px 6px 0 0;padding:10px}
+.nav-tabs .nav-link.active {color:var(--color-brand);background:var(--color-surface);box-shadow:inset 0 -2px var(--color-brand)}
+/* 5. Forms and buttons */
+.shiny-input-container:not(.shiny-input-container-inline) {width:100%;max-width:100%}
+.form-label,.control-label {font-size:13px;font-weight:600;margin-bottom:6px;color:var(--color-text)}
+.form-control,.form-select,.selectize-input {min-height:40px;border:1px solid var(--color-border);border-radius:6px;background:var(--color-surface);color:var(--color-text);box-shadow:none;font-size:14px}
+.form-control:focus,.form-select:focus,.selectize-input.focus {border-color:var(--color-brand);box-shadow:0 0 0 3px rgba(23,95,186,.12)}
+.selectize-control,.selectize-input {max-width:100%;min-width:0}.selectize-input .item {overflow-wrap:anywhere;max-width:100%}
+.selectize-dropdown {z-index:1100}.selectize-dropdown .option {white-space:normal;overflow-wrap:anywhere}
+textarea.form-control {min-height:92px;resize:vertical}
+.btn {font-size:14px;font-weight:600;border-radius:6px;padding:9px 12px;white-space:normal;transition:background-color 150ms,border-color 150ms}
+.btn-primary {--bs-btn-bg:var(--color-brand);--bs-btn-border-color:var(--color-brand);--bs-btn-hover-bg:var(--color-brand-hover);--bs-btn-hover-border-color:var(--color-brand-hover)}
+.btn-outline-primary {--bs-btn-color:var(--color-brand);--bs-btn-border-color:var(--color-brand);--bs-btn-hover-bg:var(--color-brand-subtle);--bs-btn-hover-color:var(--color-brand)}
+.btn-danger {--bs-btn-bg:var(--color-danger);--bs-btn-border-color:var(--color-danger)}
+.btn-success {--bs-btn-bg:var(--color-success);--bs-btn-border-color:var(--color-success)}
+.btn-default:not(.btn-primary):not(.btn-danger):not(.btn-success):not(.btn-outline-primary),.btn-outline-secondary {background:var(--color-surface);color:var(--color-text);border-color:var(--color-border)}
+.btn.btn-primary {background:var(--color-brand);border-color:var(--color-brand);color:var(--color-surface)}
+.btn.btn-primary:hover {background:var(--color-brand-hover)}
+.btn.btn-danger {background:var(--color-danger);border-color:var(--color-danger);color:var(--color-surface)}
+.btn.btn-success {background:var(--color-success);border-color:var(--color-success);color:var(--color-surface)}
+.btn:disabled {opacity:.55;cursor:not-allowed}
+/* 6. Surfaces and shared content */
+.card,.section-shell,.workflow-panel,.booking-filter-panel,.booking-results-panel,.appointments-panel,.clinical-side-panel,.clinical-main-panel,.timeline-panel,.agenda-table-panel,.appointment-inspector {
+  background:var(--color-surface);border:1px solid var(--color-border);border-radius:var(--radius-md);box-shadow:var(--shadow-sm);min-width:0;
+}
+.card {overflow:visible}.card-header {background:var(--color-surface-alt);border-color:var(--color-border);font-weight:600}
+.card-body,.section-shell,.workflow-panel,.booking-filter-panel,.booking-results-panel,.appointments-panel,.clinical-side-panel,.clinical-main-panel,.timeline-panel,.agenda-table-panel,.appointment-inspector {padding:16px}
+.card-body {overflow:visible}.appointments-panel,.timeline-panel {margin-top:16px}
+.panel-heading-inline,.section-title-row,.section-divider-label,.calendar-shell-header,.agenda-toolbar,.proposal-header {display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:8px;margin-bottom:12px}
+.panel-heading-inline {border-bottom:1px solid var(--color-border);padding-bottom:12px}
+.panel-heading-inline strong,.panel-heading-inline small {display:block}.panel-heading-inline strong {font-size:16px}.panel-heading-inline small {color:var(--color-text-muted);margin-top:4px}
+.form-section-label,.workflow-panel-title,.inspector-title,.kpi-panel-title {font-weight:600;font-size:13px;color:var(--color-text-muted);margin-bottom:12px}
+.form-section-label {margin-top:16px}.section-divider-label {margin-top:24px}.section-divider-label small {color:var(--color-text-muted)}
+.coverage-box,.muted-box,.empty-state,.detail-list,.architecture-note,.ai-safety-banner {padding:12px;border:1px solid var(--color-border);border-radius:8px;background:var(--color-surface-alt);margin-bottom:16px}
+.coverage-box {display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;background:var(--color-teal-subtle);color:var(--color-teal)}
+.empty-state {border-style:dashed;color:var(--color-text-muted)}.detail-list {display:grid;gap:8px}
+.context-pill,.technical-tag,.hero-badge {display:inline-flex;max-width:100%;overflow-wrap:anywhere;border:1px solid var(--color-border);background:var(--color-surface-alt);border-radius:6px;padding:4px 8px;font-size:12px;color:var(--color-text-muted)}
+.context-pill.live {background:var(--color-success-subtle);color:var(--color-success)}
+.technical-tag {font-family:Consolas,monospace}.context-pill,.hero-badge.primary {background:var(--color-brand-subtle);color:var(--color-brand)}
+.inspector-separator {border-top:1px solid var(--color-border);margin:16px 0}
+/* 7. Semantic states shared by every module */
+.status-chip {display:inline-flex;align-items:center;gap:5px;padding:3px 8px;border-radius:6px;font-size:12px;font-weight:600;line-height:1.4;max-width:100%;overflow-wrap:anywhere}
+.status-chip::before {content:"";width:6px;height:6px;border-radius:50%;background:currentColor;flex:none}
+.status-booked,.status-planned,.status-busy {background:var(--color-brand-subtle);color:var(--color-brand-hover)}
+.status-free,.status-accepted,.status-finished,.status-active {background:var(--color-success-subtle);color:var(--color-success)}
+.status-in-progress,.status-tentative {background:var(--color-warning-subtle);color:var(--color-warning)}
+.status-fulfilled {background:var(--color-teal-subtle);color:var(--color-teal)}
+.status-cancelled,.status-declined,.status-entered-in-error {background:var(--color-danger-subtle);color:var(--color-danger)}
+.status-default,.status-noshow {background:var(--color-surface-alt);color:var(--color-text-muted)}
+/* 8. Home */
+.hero {margin:16px 0;padding:24px;border:1px solid var(--color-border);border-radius:12px;background:var(--color-surface)}
+.hero-grid {display:grid;grid-template-columns:minmax(0,1.1fr) minmax(0,.9fr);gap:32px;align-items:center}
+.hero h1 {font-size:32px;margin:8px 0 16px}.hero-sub {font-size:17px}.hero-copy {color:var(--color-text-muted)}
+.hero-badges {display:flex;flex-wrap:wrap;gap:8px;margin-top:16px}
+.hero-clinical-card {background:var(--color-surface-alt);padding:16px;border:1px solid var(--color-border);border-radius:8px}
+.hero-clinical-card-top {display:flex;flex-wrap:wrap;gap:8px;justify-content:space-between;margin-bottom:12px}
+.hero-path-step {display:flex;align-items:center;gap:12px;padding:10px 0}.hero-path-step strong,.hero-path-step small {display:block}
+.hero-path-step small {color:var(--color-text-muted)}
+.hero-path-index,.workflow-number,.metric-icon,.patient-avatar,.confirmation-icon,.availability-summary-icon {display:inline-flex;align-items:center;justify-content:center;flex:none;width:36px;height:36px;border-radius:8px;background:var(--color-brand-subtle);color:var(--color-brand);font-weight:650;font-size:13px}
+.hero-path-connector {height:8px;border-left:1px solid var(--color-border);margin-left:18px}
+.metric-grid {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:16px;margin:16px 0}
+.metric-card {display:flex;align-items:center;gap:12px;padding:16px;border:1px solid var(--color-border);background:var(--color-surface);border-radius:8px}
+.metric-card>div {min-width:0}.metric-label {display:block;color:var(--color-text-muted);font-size:13px}.metric-card .shiny-text-output {font-size:24px;font-weight:650}
+.home-pro-grid {display:grid;grid-template-columns:minmax(0,1.5fr) minmax(0,1fr);gap:16px}
+.arch-flow {display:flex;align-items:center;flex-wrap:wrap;gap:8px;margin:16px 0}.arch-node {padding:10px;border:1px solid var(--color-border);border-radius:6px}.arch-node.emphasis {background:var(--color-brand-subtle);color:var(--color-brand)}
+.principle {padding:12px;background:var(--color-surface-alt);border-radius:6px;font-weight:600}
+.proof-list {display:grid;gap:12px}.proof-item {display:flex;gap:10px}.proof-item>span {color:var(--color-success)}.proof-item strong,.proof-item small {display:block}.proof-item small {color:var(--color-text-muted)}
+/* 9. Patient booking */
+.booking-stepper {display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:16px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:8px;margin-bottom:16px}
+.booking-step {display:flex;align-items:center;gap:8px;flex:1;min-width:150px}.booking-step>span {display:grid;place-items:center;width:28px;height:28px;flex:none;background:var(--color-surface-alt);border-radius:50%;color:var(--color-text-muted)}
+.booking-step strong,.booking-step small {display:block}.booking-step small {color:var(--color-text-muted)}.booking-step.active>span {background:var(--color-brand-subtle);color:var(--color-brand)}
+.booking-step-line {height:1px;width:24px;background:var(--color-border)}
+.workflow-header {display:flex;flex-wrap:wrap;align-items:center;gap:12px;margin-bottom:16px;padding:12px;background:var(--color-surface-alt);border-radius:8px}.workflow-header strong,.workflow-header span {display:block}.workflow-line {flex:1}
+.availability-summary,.confirmation-pro {display:flex;align-items:flex-start;gap:12px;padding:12px;border:1px solid var(--color-border);border-radius:8px;margin:12px 0;background:var(--color-success-subtle);color:var(--color-success)}
+.availability-summary strong,.availability-summary span {display:block}.confirmation h4 {font-size:18px}.confirmation p {margin:0}
+.calendar-shell {background:var(--color-surface-alt);border:1px solid var(--color-border);border-radius:8px;padding:12px;margin-bottom:16px}
+.calendar-shell-title {font-weight:600}.calendar-shell-sub,.calendar-range {color:var(--color-text-muted);font-size:12px}
+.mini-calendar {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(150px,100%),1fr));gap:8px}
+.calendar-day {background:var(--color-surface);padding:12px;border:1px solid var(--color-border);border-bottom:3px solid var(--color-brand);border-radius:8px;min-width:0}
+.calendar-day.available {border-bottom-color:var(--color-success)}.calendar-day.mixed {border-bottom-color:var(--color-teal)}
+.calendar-weekday {font-size:12px;color:var(--color-text-muted);font-weight:600}.calendar-date {display:flex;align-items:baseline;gap:6px;margin:4px 0}.day-num {font-size:24px;font-weight:650}.month {font-size:12px}.calendar-count {font-weight:600;font-size:13px}
+.calendar-status-line {display:flex;flex-wrap:wrap;gap:6px;margin-top:6px}.calendar-dot-label {font-size:12px}.calendar-dot-label.free {color:var(--color-success)}
+.slot-selector .shiny-options-group {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(170px,100%),1fr));gap:8px;max-height:400px;overflow:auto;padding:4px}
+.slot-selector .radio {margin:0}.slot-selector .radio label {display:flex;align-items:center;gap:8px;min-height:44px;padding:10px;border:1px solid var(--color-border);border-radius:6px;cursor:pointer;width:100%}
+.slot-selector input[type=radio] {position:static;margin:0;flex:none;accent-color:var(--color-brand)}
+.slot-selector label:hover {background:var(--color-surface-alt)}.slot-selector label:has(input:checked) {border-color:var(--color-brand);background:var(--color-brand-subtle);color:var(--color-brand)}
+.slot-selector label:has(input:disabled) {opacity:.55;cursor:not-allowed}.slot-selector label:has(input:focus-visible) {outline:2px solid var(--color-brand);outline-offset:2px}
+/* 10. Scheduler */
+.kpi-panel {margin-bottom:16px}.kpi-strip {display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:8px}
+.kpi-item {padding:12px;border:1px solid var(--color-border);border-left:3px solid var(--color-navy);border-radius:8px;background:var(--color-surface)}
+.kpi-value {display:block;font-size:24px;font-weight:650;line-height:1.2}.kpi-label {display:block;font-size:13px;color:var(--color-text-muted);margin-top:4px}
+.tone-blue {border-left-color:var(--color-brand)}.tone-teal {border-left-color:var(--color-teal)}.tone-amber {border-left-color:var(--color-warning)}.tone-red {border-left-color:var(--color-danger)}
+.appointment-inspector {align-self:start}.inspector-empty,.encounter-empty {padding:16px;text-align:center;color:var(--color-text-muted)}
+.inspector-empty strong,.inspector-empty span,.encounter-empty strong,.encounter-empty span {display:block}
+.appointment-profile {display:grid;grid-template-columns:auto minmax(0,1fr);gap:12px;align-items:center}
+.appointment-profile-main strong,.appointment-profile-main span {display:block}.appointment-profile-main span {color:var(--color-text-muted);font-size:13px}
+.appointment-profile>.status-chip {grid-column:1/-1;justify-self:start}.appointment-facts {grid-column:1/-1;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px}
+.appointment-facts>div {padding:8px;background:var(--color-surface-alt);border-radius:6px}.appointment-facts span {display:block;font-size:12px;color:var(--color-text-muted)}.appointment-facts strong,.appointment-facts code {display:block;font-size:13px}
+/* 11. Time board: genuine coordinate layout, contained scrolling and lane widths. */
+.week-calendar-shell {border:1px solid var(--color-border);border-radius:8px;background:var(--color-surface);margin-bottom:16px;min-width:0}
+.week-calendar-toolbar {display:flex;flex-wrap:wrap;align-items:center;justify-content:space-between;gap:12px;padding:12px 16px;border-bottom:1px solid var(--color-border)}
+.week-calendar-title {font-size:16px;font-weight:600}.week-calendar-range {font-size:12px;color:var(--color-text-muted)}
+.week-calendar-legend {display:flex;flex-wrap:wrap;gap:12px}.legend-dot {display:inline-flex;align-items:center;gap:5px;font-size:12px}
+.legend-dot::before {content:"";width:7px;height:7px;border-radius:2px;background:var(--color-brand)}.legend-dot.active::before {background:var(--color-warning)}.legend-dot.done::before {background:var(--color-teal)}.legend-dot.cancelled::before {background:var(--color-danger)}
+.week-calendar-scroll {max-height:clamp(320px,58vh,620px);overflow:auto;overscroll-behavior:contain;scrollbar-gutter:stable;border-radius:0 0 8px 8px}
+.week-calendar-board {display:grid;--day-width:180px;grid-template-columns:60px var(--day-tracks);width:100%;min-width:0}
+.week-time-wrap {position:sticky;left:0;z-index:4;background:var(--color-surface-alt);border-right:1px solid var(--color-border)}
+.week-time-header,.week-day-header {height:64px;position:sticky;top:0;background:var(--color-surface-alt);border-bottom:1px solid var(--color-border);z-index:3}
+.week-time-header {display:grid;place-items:center;font-size:12px}.week-time-rail {position:relative}.week-time-label {position:absolute;left:0;right:0;text-align:center;font-size:12px;color:var(--color-text-muted);font-variant-numeric:tabular-nums}
+.week-day-wrap {border-right:1px solid var(--color-border)}.week-day-header {display:flex;flex-wrap:wrap;align-content:center;gap:4px;padding:8px 12px}.week-day-header.is-today {background:var(--color-brand-subtle)}
+.week-day-name,.week-day-month {font-size:12px}.week-day-number {font-size:18px;font-weight:650;line-height:1}.week-day-count {flex-basis:100%;font-size:12px;color:var(--color-text-muted)}
+.week-day-column {position:relative;background:repeating-linear-gradient(to bottom,var(--color-surface) 0,var(--color-surface) calc(var(--hour-height) - 1px),var(--color-border) calc(var(--hour-height) - 1px),var(--color-border) var(--hour-height))}
+.week-event {position:absolute;border:1px solid var(--color-border);border-left:3px solid var(--color-brand);border-radius:6px;background:var(--color-brand-subtle);padding:4px 6px;overflow:hidden;font-size:12px;line-height:18px}
+.week-event:hover,.week-event:focus-visible {border-color:var(--color-brand);box-shadow:var(--shadow-sm)}
+.week-event-time {font-weight:600;font-variant-numeric:tabular-nums}.week-event-patient {font-weight:650}.week-event-service,.week-event-meta {color:var(--color-text-muted)}
+.week-event>div {white-space:nowrap;overflow:hidden;text-overflow:ellipsis}
+.event-in-progress {background:var(--color-warning-subtle);border-left-color:var(--color-warning)}
+.event-fulfilled,.event-finished {background:var(--color-teal-subtle);border-left-color:var(--color-teal)}
+.event-cancelled,.event-declined {background:var(--color-danger-subtle);border-left-color:var(--color-danger)}
+/* 12. Clinical workspace */
+.clinical-command-grid {display:grid;grid-template-columns:minmax(300px,.38fr) minmax(0,.62fr);gap:16px}
+.vitals-grid {margin-bottom:16px;display:grid;grid-template-columns:repeat(auto-fit,minmax(min(180px,100%),1fr));gap:12px}
+.vital-input {padding:12px;background:var(--color-surface-alt);border:1px solid var(--color-border);border-radius:8px}.vital-icon {display:block;font-size:12px;font-weight:600;color:var(--color-text-muted);margin-bottom:4px}
+.encounter-patient-card {display:flex;flex-wrap:wrap;align-items:center;gap:12px;padding:12px;background:var(--color-brand-subtle);border-radius:8px}.encounter-patient-main {flex:1;min-width:160px}.encounter-patient-main strong,.encounter-label,.encounter-status code {display:block}.encounter-label {font-size:12px;color:var(--color-text-muted)}
+.timeline-pro {display:grid;grid-template-columns:repeat(auto-fit,minmax(min(245px,100%),1fr));gap:12px}.timeline-item {padding:0 0 12px 12px;border-left:2px solid var(--color-border)}
+.timeline-card {padding:12px;background:var(--color-surface-alt);border-radius:6px}.timeline-card-top,.timeline-meta {display:flex;flex-wrap:wrap;justify-content:space-between;gap:6px}.timeline-type,.timeline-meta {font-size:12px;color:var(--color-text-muted)}
+.transaction-empty {padding:12px;color:var(--color-text-muted)}.proposal-box {margin-top:16px}.proposal-header {padding:12px;background:var(--color-surface-alt)}.review-state {color:var(--color-warning);font-size:12px}
+/* 13. Technical workbench and tables */
+.studio-command-strip {display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:12px;margin-bottom:16px}
+.studio-command-strip>div {display:grid;grid-template-columns:auto minmax(0,1fr);column-gap:10px;padding:12px;background:var(--color-surface);border:1px solid var(--color-border);border-radius:8px}.studio-command-strip>div>span {grid-row:1/3;color:var(--color-brand);font-weight:600}.studio-command-strip small {color:var(--color-text-muted)}
+.studio-code-panel {background:var(--color-code);border-radius:8px;overflow:hidden}.studio-code-header {display:flex;flex-wrap:wrap;justify-content:space-between;gap:8px;padding:12px;color:var(--color-code-text)}
+.json-view {background:var(--color-code);color:var(--color-code-text);border:0;border-radius:8px;padding:16px;max-height:55vh;overflow:auto;font-size:13px;white-space:pre;tab-size:2}.json-view.compact {max-height:260px}.studio-code-panel .json-view {margin:0}
+.json-toolbar {display:flex;flex-wrap:wrap;gap:8px;margin:12px 0}
+.architecture-comparison {display:grid;grid-template-columns:minmax(0,1fr) auto minmax(0,1fr);gap:16px}.architecture-card {padding:16px;background:var(--color-surface-alt);border-radius:8px}.architecture-card-label {font-size:12px;color:var(--color-text-muted)}.architecture-evolve {align-self:center}.architecture-evolve small {display:block}.architecture-note {margin-top:16px}
+.history-grid details {padding:12px;border:1px solid var(--color-border);border-radius:8px;margin-bottom:12px}.history-grid summary {cursor:pointer;font-weight:600}
+.ref-graph {display:grid;gap:12px;padding:16px;overflow:auto}.graph-edge {display:flex;flex-wrap:wrap;gap:8px}.graph-center {padding:12px;background:var(--color-brand-subtle);border-radius:6px}
+.ai-output {white-space:pre-wrap;padding:16px;border:1px solid var(--color-border);border-radius:8px;margin:16px 0;background:var(--color-surface-alt)}.source-list {display:flex;flex-wrap:wrap;gap:8px}.ai-safety-banner {color:var(--color-teal);background:var(--color-teal-subtle)}
+.datatables {width:100%;max-width:100%;overflow-x:auto}.dataTables_wrapper {width:100%;font-size:13px;min-width:0}.dataTables_scroll {max-width:100%}.dataTables_scrollBody {overscroll-behavior-x:contain}
+.table.dataTable {width:100%;font-size:13px}.dataTable thead th {background:var(--color-surface-alt);color:var(--color-text-muted);font-weight:600}.dataTable tbody td {padding:8px;vertical-align:middle;white-space:nowrap}.dataTable tbody tr:hover {background:var(--color-brand-subtle)}
+.dataTables_wrapper .dataTables_info,.dataTables_wrapper .dataTables_paginate {font-size:12px;margin-top:8px}.dataTables_filter input {max-width:180px}.dataTables_wrapper input {min-width:0}
+/* 14. Explicit institutional desktop breakpoints */
+@media(min-width:1600px) {.week-calendar-board {--day-width:180px;grid-template-columns:60px var(--day-tracks)}}
+@media(min-width:1200px) and (max-width:1599.98px) {.week-calendar-board {--day-width:calc((100% - 60px)/5)}.hero-grid {gap:24px}}
+@media(min-width:992px) and (max-width:1199.98px) {
+  .inspector-layout,.clinical-command-grid {grid-template-columns:1fr}.navbar>.container-fluid {flex-wrap:wrap}.navbar-brand {flex-basis:100%}.navbar-collapse {width:100%}
+  .week-calendar-board {--day-width:185px}.home-pro-grid {grid-template-columns:1fr}
+}
+@media(min-width:768px) and (max-width:991.98px) {
+  .booking-layout,.request-layout,.inspector-layout,.clinical-command-grid,.hero-grid,.home-pro-grid {grid-template-columns:1fr}
+  .kpi-strip {grid-template-columns:repeat(3,minmax(0,1fr))}.metric-grid,.studio-command-strip {grid-template-columns:repeat(2,minmax(0,1fr))}.booking-step-line {display:none}
+}
+@media(max-width:767.98px) {
+  .responsive-grid,.clinical-command-grid,.hero-grid,.home-pro-grid,.architecture-comparison {grid-template-columns:1fr}.hero {padding:16px}.hero h1,.page-heading h2 {font-size:28px}
+  .kpi-strip,.metric-grid,.studio-command-strip {grid-template-columns:repeat(2,minmax(0,1fr))}.booking-step-line {display:none}.page-actions {margin-left:0}.week-calendar-legend {gap:8px}.architecture-evolve {display:none}
+}
+@media(prefers-reduced-motion:reduce) {*,*::before,*::after {transition:none;scroll-behavior:auto}}

@@ -1,0 +1,3 @@
+test_that("Appointment starts Encounter and clinical transaction finishes",{
+  s<-seed_store();b<-book_appointment(s,"pat-001","Salud Completa","loc-sur","hs-cardio-sur","role-fonseca-cardio","slot-cardio-20261007-0800","control-specialist","web");e<-start_encounter(s,b$appointment_id);expect_true(e$success);expect_equal(state_resource(s(),"Encounter",e$encounter_id)$status,"in-progress");f<-finalize_encounter(s,e$encounter_id,c(150,95),"Hipertensión arterial","Perfil renal","laboratory","Seguimiento");expect_true(f$success);expect_equal(state_resource(s(),"Encounter",e$encounter_id)$status,"finished")
+})

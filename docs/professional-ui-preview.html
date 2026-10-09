@@ -1,0 +1,323 @@
+<!doctype html><html><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1"><title>Clinical UI 1.3 Preview</title><style>:root{
+  --clinical-navy:#16324F;
+  --clinical-blue:#2F6FED;
+  --clinical-blue-strong:#245AC2;
+  --clinical-blue-soft:#EEF4FF;
+  --clinical-teal:#2A9D8F;
+  --clinical-teal-soft:#EAF8F5;
+  --clinical-green:#2F855A;
+  --clinical-green-soft:#EDF9F2;
+  --clinical-amber:#B7791F;
+  --clinical-amber-soft:#FFF7E8;
+  --clinical-red:#C2414B;
+  --clinical-red-soft:#FFF0F1;
+  --ink:#243447;
+  --muted:#6B7A8C;
+  --line:#DDE6EE;
+  --line-strong:#CAD7E2;
+  --surface:#F4F7FA;
+  --surface-2:#F8FAFC;
+  --white:#FFFFFF;
+  --technical:#102A43;
+  --shadow-sm:0 2px 10px rgba(21,48,76,.06);
+  --shadow-md:0 10px 28px rgba(21,48,76,.08);
+  --radius-sm:10px;
+  --radius-md:14px;
+  --radius-lg:18px;
+}
+
+html,body{background:var(--surface);color:var(--ink)}
+body{font-size:14px;font-family:"Inter","Segoe UI",Arial,sans-serif;line-height:1.45}
+
+/* ---------- Shell / navbar ---------- */
+.navbar{background:#fff!important;border-bottom:1px solid var(--line)!important;box-shadow:0 4px 18px rgba(22,50,79,.045)!important;padding:.62rem 1rem;position:sticky;top:0;z-index:1030}
+.navbar-brand{margin-right:1.4rem}
+.navbar .nav-link{color:#536477!important;font-weight:650;border-radius:9px;padding:.55rem .82rem!important;margin:0 .08rem;transition:all .18s ease}
+.navbar .nav-link:hover{background:#F3F6FA;color:var(--clinical-navy)!important}
+.navbar .nav-link.active{background:var(--clinical-blue-soft)!important;color:var(--clinical-blue-strong)!important}
+.brand{display:flex;align-items:center;gap:.7rem;font-weight:800;color:var(--clinical-navy);letter-spacing:-.01em}
+.brand-mark{display:inline-flex;align-items:center;justify-content:center;background:var(--clinical-navy);color:#fff;border-radius:8px;padding:.32rem .52rem;font-size:.7rem;letter-spacing:.07em;box-shadow:inset 0 0 0 1px rgba(255,255,255,.12)}
+.demo-strip{display:flex;align-items:center;gap:.55rem;padding:.5rem 1.25rem;background:#FBFCFE;border-bottom:1px solid var(--line);font-size:.69rem;font-weight:750;letter-spacing:.045em;color:#66788A;overflow-x:auto}
+.demo-strip span{white-space:nowrap;border:1px solid #E4EBF2;background:#fff;border-radius:999px;padding:.24rem .55rem}
+.app-footer{padding:.85rem 1.25rem;border-top:1px solid var(--line);background:#fff;color:#738194;font-size:.74rem}
+
+/* ---------- Global components ---------- */
+.card{border:1px solid var(--line)!important;box-shadow:var(--shadow-sm)!important;border-radius:var(--radius-md)!important;background:#fff!important;overflow:hidden}
+.card:hover{box-shadow:0 7px 22px rgba(21,48,76,.075)!important}
+.card-header{font-weight:750;background:#FBFCFE!important;border-bottom:1px solid var(--line)!important;color:var(--clinical-navy);padding:.9rem 1rem!important}
+.bslib-card .card-body{padding:1.05rem!important}
+
+.nav-tabs{border-bottom:1px solid var(--line)!important;gap:.2rem;padding:.3rem .45rem 0;background:#FBFCFE}
+.nav-tabs .nav-link{border:0!important;border-radius:8px 8px 0 0!important;color:#607286;font-weight:650;padding:.62rem .8rem}
+.nav-tabs .nav-link.active{background:#fff!important;color:var(--clinical-blue-strong)!important;box-shadow:inset 0 -2px 0 var(--clinical-blue)}
+
+.form-label,.control-label{font-size:.78rem;font-weight:700;color:#4D6073;margin-bottom:.38rem}
+.form-control,.form-select,.selectize-input{border:1px solid var(--line-strong)!important;border-radius:10px!important;background:#fff!important;min-height:42px;box-shadow:none!important;color:var(--ink)}
+.form-control:focus,.form-select:focus,.selectize-input.focus{border-color:#90B4F8!important;box-shadow:0 0 0 3px rgba(47,111,237,.1)!important}
+textarea.form-control{min-height:92px}
+
+.btn{border-radius:10px!important;font-weight:700!important;padding:.58rem .9rem!important;box-shadow:none!important;transition:all .16s ease}
+.btn-primary{background:var(--clinical-blue)!important;border-color:var(--clinical-blue)!important}
+.btn-primary:hover{background:var(--clinical-blue-strong)!important;border-color:var(--clinical-blue-strong)!important;transform:translateY(-1px)}
+.btn-outline-primary{border-color:#9DBAF7!important;color:var(--clinical-blue-strong)!important;background:#fff!important}
+.btn-outline-primary:hover{background:var(--clinical-blue-soft)!important;color:var(--clinical-blue-strong)!important}
+.btn-success{background:var(--clinical-green)!important;border-color:var(--clinical-green)!important}
+.btn-danger{background:var(--clinical-red)!important;border-color:var(--clinical-red)!important}
+.btn-outline-secondary{border-color:#C7D2DE!important;color:#586A7C!important;background:#fff!important}
+
+.table.dataTable{border-collapse:separate!important;border-spacing:0!important}
+.dataTables_wrapper{color:var(--ink)}
+.dataTable thead th{background:#F6F9FC!important;color:#586B7D!important;font-size:.72rem!important;text-transform:uppercase;letter-spacing:.045em;border-bottom:1px solid var(--line)!important}
+.dataTable tbody td{padding:.72rem .65rem!important;border-bottom:1px solid #EDF1F5!important;vertical-align:middle}
+.dataTable tbody tr{transition:background .15s ease}
+.dataTable tbody tr:hover{background:#F7FAFD!important}
+.dataTable tbody tr.selected{background:#EAF2FF!important;color:inherit!important}
+
+/* ---------- Page headings ---------- */
+.page-heading{display:flex;justify-content:space-between;align-items:center;gap:1rem;margin:1.3rem .1rem 1rem;padding:.35rem .15rem}
+.page-heading h2{margin:0 0 .18rem;font-size:1.55rem;letter-spacing:-.02em;color:var(--clinical-navy);font-weight:800}
+.page-heading p{color:var(--muted);margin:0;max-width:780px}
+.context-pill{display:inline-flex;align-items:center;padding:.38rem .68rem;border:1px solid #BFD1F8;background:var(--clinical-blue-soft);border-radius:999px;color:#285AAF;font-size:.72rem;font-weight:750;white-space:nowrap}
+.context-pill.technical{background:#EEF3F7;color:var(--technical);border-color:#CED9E2}
+
+/* ---------- Home ---------- */
+.hero{max-width:1180px;margin:1.2rem auto 1.15rem;padding:2.45rem 2.2rem;border:1px solid var(--line);border-radius:var(--radius-lg);background:#fff;box-shadow:var(--shadow-md)}
+.hero-grid{display:grid;grid-template-columns:minmax(0,1.35fr) minmax(330px,.65fr);gap:2rem;align-items:center}
+.hero h1{font-size:2.85rem;line-height:1.02;letter-spacing:-.045em;margin:.55rem 0 .8rem;color:var(--clinical-navy);font-weight:850}
+.hero-sub{font-size:1.12rem;color:#41566A;max-width:760px;margin-bottom:.6rem}
+.hero-copy{color:var(--muted);max-width:790px;margin-bottom:0}
+.eyebrow{font-weight:800;color:var(--clinical-blue);font-size:.72rem;letter-spacing:.1em}
+.hero-path{border:1px solid var(--line);border-radius:16px;padding:1rem;background:#F8FAFD}
+.hero-path-title{font-size:.72rem;text-transform:uppercase;letter-spacing:.07em;color:#6C7D8E;font-weight:800;margin-bottom:.7rem}
+.hero-path-step{display:flex;align-items:center;gap:.72rem;padding:.64rem .72rem;border-radius:10px;background:#fff;border:1px solid #E5ECF2;margin-bottom:.55rem}
+.hero-path-step:last-child{margin-bottom:0}
+.hero-path-index{width:28px;height:28px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:var(--clinical-blue-soft);color:var(--clinical-blue-strong);font-weight:800;font-size:.74rem;flex:0 0 auto}
+.hero-path-step strong{display:block;color:var(--clinical-navy);font-size:.83rem}
+.hero-path-step small{color:#7A8999}
+.metric-icon{display:inline-flex;align-items:center;justify-content:center;width:34px;height:34px;border-radius:10px;background:var(--clinical-blue-soft);color:var(--clinical-blue-strong);font-weight:850}
+.bslib-value-box{border:1px solid var(--line)!important;border-radius:14px!important;box-shadow:var(--shadow-sm)!important}
+.bslib-value-box .value-box-title{font-weight:700;color:#637487}
+.section-shell{padding:1.35rem;background:#fff;border:1px solid var(--line);border-radius:var(--radius-md);margin:1rem 0;box-shadow:var(--shadow-sm)}
+.section-shell h3{font-size:1rem;color:var(--clinical-navy);font-weight:800;margin-bottom:1rem}
+.arch-flow{display:flex;align-items:center;justify-content:center;gap:.7rem;flex-wrap:wrap;margin:1rem 0}
+.arch-node{border:1px solid var(--line);padding:.72rem .9rem;border-radius:10px;background:#fff;color:#526579;font-weight:650}
+.arch-node.emphasis{background:var(--clinical-blue-soft);border-color:#BBD0F9;color:#285AAF;font-weight:800}
+.arch-arrow{color:#9AA8B7;font-size:1rem}
+.principle{text-align:center;padding:1.15rem;font-size:1rem;font-weight:800;color:var(--technical);background:#F8FAFC;border-radius:10px;margin-top:1rem}
+
+/* ---------- Clinical info boxes ---------- */
+.coverage-box,.muted-box,.empty-state{padding:.78rem .88rem;border:1px solid var(--line);border-radius:10px;background:var(--surface-2);color:#56697C;display:flex;justify-content:space-between;gap:1rem;margin-bottom:1rem}
+.coverage-box{background:var(--clinical-teal-soft);border-color:#CDEBE6;color:#336B65}
+.empty-state{justify-content:flex-start;border-style:dashed;background:#FBFCFD;color:#7A8998}
+.confirmation{border:1px solid #CBE8D7;border-left:4px solid var(--clinical-green);padding:1rem 1.05rem;background:var(--clinical-green-soft);border-radius:10px}
+.confirmation h4{font-size:1rem;color:#235E40;font-weight:800;margin-bottom:.55rem}
+.detail-list{display:flex;flex-direction:column;gap:.48rem;margin-bottom:1rem;padding:.9rem;border:1px solid var(--line);border-radius:10px;background:#FCFDFE}
+.encounter-banner{display:flex;gap:.65rem;align-items:center;flex-wrap:wrap;padding:.82rem .9rem;border:1px solid #BFD1F8;background:var(--clinical-blue-soft);border-radius:10px;margin-bottom:1rem;color:#345D9D}
+
+/* ---------- Status chips ---------- */
+.status-chip{display:inline-flex;align-items:center;gap:.3rem;border-radius:999px;padding:.28rem .55rem;font-size:.68rem;font-weight:800;letter-spacing:.02em;border:1px solid transparent}
+.status-chip::before{content:"";width:6px;height:6px;border-radius:50%;background:currentColor;opacity:.8}
+.status-booked{background:var(--clinical-blue-soft);color:#2C5EAF;border-color:#C9D9FA}
+.status-free,.status-accepted,.status-finished,.status-active{background:var(--clinical-green-soft);color:#2F7651;border-color:#CDE9D8}
+.status-in-progress{background:var(--clinical-amber-soft);color:#956216;border-color:#F0D6A4}
+.status-fulfilled{background:var(--clinical-teal-soft);color:#2A7068;border-color:#C8E9E4}
+.status-cancelled,.status-declined,.status-entered-in-error{background:var(--clinical-red-soft);color:#A63C45;border-color:#F0C7CB}
+.status-default{background:#F0F3F6;color:#657587;border-color:#DDE4EA}
+
+/* ---------- Appointment calendar / availability ---------- */
+.calendar-shell{border:1px solid var(--line);background:#FBFCFE;border-radius:14px;padding:.9rem;margin-bottom:1rem}
+.calendar-shell-header{display:flex;align-items:center;justify-content:space-between;gap:.8rem;margin-bottom:.7rem}
+.calendar-shell-title{font-size:.78rem;font-weight:800;color:var(--clinical-navy);letter-spacing:.02em}
+.calendar-shell-sub{font-size:.7rem;color:#8090A0}
+.mini-calendar{display:grid;grid-template-columns:repeat(auto-fit,minmax(126px,1fr));gap:.58rem}
+.calendar-day{position:relative;min-height:110px;border:1px solid var(--line);border-radius:12px;background:#fff;padding:.7rem .72rem;overflow:hidden}
+.calendar-day::after{content:"";position:absolute;left:0;right:0;bottom:0;height:3px;background:#D8E2EA}
+.calendar-day.available::after{background:var(--clinical-green)}
+.calendar-day.booked::after{background:var(--clinical-blue)}
+.calendar-day.mixed::after{background:var(--clinical-teal)}
+.calendar-weekday{text-transform:uppercase;font-size:.62rem;letter-spacing:.08em;color:#8A98A7;font-weight:800}
+.calendar-date{display:flex;align-items:baseline;gap:.34rem;margin:.15rem 0 .32rem}
+.calendar-date .day-num{font-size:1.62rem;line-height:1;font-weight:850;color:var(--clinical-navy)}
+.calendar-date .month{font-size:.7rem;text-transform:uppercase;color:#6B7C8D;font-weight:750}
+.calendar-count{font-size:.75rem;font-weight:750;color:#506478}
+.calendar-range{font-size:.66rem;color:#8795A5;margin-top:.18rem}
+.calendar-status-line{display:flex;gap:.35rem;flex-wrap:wrap;margin-top:.38rem}
+.calendar-dot-label{display:inline-flex;align-items:center;gap:.25rem;font-size:.62rem;color:#708092}
+.calendar-dot-label::before{content:"";width:6px;height:6px;border-radius:50%;background:#A7B4C0}
+.calendar-dot-label.booked::before{background:var(--clinical-blue)}
+.calendar-dot-label.cancelled::before{background:var(--clinical-red)}
+.calendar-dot-label.fulfilled::before{background:var(--clinical-teal)}
+.calendar-dot-label.free::before{background:var(--clinical-green)}
+
+.slot-selector .shiny-options-group{display:grid;grid-template-columns:repeat(auto-fit,minmax(170px,1fr));gap:.55rem;margin-bottom:.9rem}
+.slot-selector .radio{margin:0!important}
+.slot-selector .radio label{display:flex!important;align-items:center;gap:.55rem;width:100%;padding:.72rem .78rem;border:1px solid var(--line);border-radius:10px;background:#fff;color:#4C6073;font-weight:650;cursor:pointer;transition:all .15s ease}
+.slot-selector .radio label:hover{border-color:#AFC6F5;background:#F7FAFF}
+.slot-selector .radio input[type=radio]{accent-color:var(--clinical-blue);margin:0!important}
+.slot-selector .radio label:has(input:checked){border-color:#82A9F5;background:var(--clinical-blue-soft);color:#285AAF;box-shadow:0 0 0 2px rgba(47,111,237,.07)}
+
+.agenda-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;margin-bottom:.75rem}
+.agenda-toolbar-title{font-size:.82rem;font-weight:800;color:var(--clinical-navy)}
+.agenda-toolbar-meta{font-size:.7rem;color:#8291A0}
+
+/* ---------- Timeline ---------- */
+.timeline{position:relative;margin-left:.25rem;padding-top:.25rem}
+.timeline-item{position:relative;padding:0 0 1.05rem 1.6rem;border-left:1px solid #D7E1E9}
+.timeline-item:last-child{border-left-color:transparent}
+.timeline-dot{position:absolute;width:10px;height:10px;border-radius:50%;background:var(--clinical-blue);left:-5.5px;top:5px;box-shadow:0 0 0 4px #EDF3FF}
+.timeline-item strong{color:var(--clinical-navy);font-weight:750}
+
+/* ---------- FHIR Studio ---------- */
+.json-view{background:#122033;color:#DDE8F2;padding:1rem;border-radius:10px;max-height:580px;overflow:auto;font-size:.77rem;white-space:pre-wrap;border:1px solid #253850}
+.json-view.compact{max-height:260px}
+.history-grid details{border:1px solid var(--line);border-radius:10px;padding:.72rem;margin-bottom:.6rem;background:#fff}
+.history-grid summary{font-weight:700;color:#4D6073;cursor:pointer}
+.ref-graph{display:flex;flex-direction:column;gap:.6rem;align-items:center;padding:2rem}
+.graph-center{padding:1rem 1.2rem;border-radius:10px;background:var(--clinical-blue-soft);border:1px solid #BCD0F7;font-weight:800;color:#285AAF}
+.graph-edge{display:flex;gap:.7rem;align-items:center}
+.architecture-panel{padding:1.5rem}
+.architecture-panel pre{background:#F8FAFC;border:1px solid var(--line);padding:1.2rem;border-radius:10px;color:#40566B}
+.ai-output{white-space:pre-wrap;padding:1rem;margin-top:1rem;background:#F8FAFC;border:1px solid var(--line);border-radius:10px;min-height:90px}
+.source-list{display:flex;gap:.5rem;flex-wrap:wrap;margin-top:1rem}
+.source-list code{background:#EEF2F6;padding:.2rem .4rem;border-radius:5px}
+.proposal-box{margin-top:1rem}.review-actions{display:flex;gap:.7rem;align-items:center;margin-top:.7rem}
+
+/* ---------- Responsive ---------- */
+@media(max-width:1050px){
+  .hero-grid{grid-template-columns:1fr}.hero-path{max-width:none}.hero h1{font-size:2.35rem}
+}
+@media(max-width:900px){
+  .hero{padding:1.5rem}.hero h1{font-size:2.1rem}.demo-strip{overflow-x:auto}.page-heading{flex-direction:column;align-items:flex-start}.arch-arrow{transform:rotate(90deg)}
+  .mini-calendar{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media(max-width:580px){
+  .mini-calendar{grid-template-columns:1fr 1fr}.calendar-day{min-height:98px}.hero{border-radius:12px;margin-top:.7rem;padding:1.2rem}.hero h1{font-size:1.85rem}
+  .navbar .nav-link{padding:.45rem .6rem!important}
+}
+.form-section-label{font-size:.68rem;font-weight:800;letter-spacing:.075em;text-transform:uppercase;color:#7B8B9B;margin:.35rem 0 .65rem;padding-bottom:.38rem;border-bottom:1px solid #EDF1F5}
+.clinical-workspace{background:#FBFCFE;border:1px solid #E6ECF2;border-radius:12px;padding:.9rem;margin-bottom:.9rem}
+
+/* ========================================================================
+   PROFESSIONAL CLINICAL UI 1.3
+   Product-grade layer: scheduling board, clinical workspace and workbench
+   ======================================================================== */
+
+body{background:#F2F5F8;color:#26384A}
+.container-fluid{max-width:1560px;margin:0 auto}
+.navbar{min-height:64px;padding:.64rem 1.35rem;border-bottom-color:#D9E2EA!important}
+.navbar-brand{font-size:.92rem}
+.brand-mark{width:38px;height:30px;padding:0;border-radius:8px;background:#173A5E;letter-spacing:.08em}
+.navbar .nav-link{font-size:.78rem;letter-spacing:.005em}
+.demo-strip{padding:.42rem 1.5rem;background:#F8FAFC;color:#738394}
+.demo-strip span{padding:.2rem .52rem;background:transparent;border-color:#DCE5EC}
+.app-footer{background:#F8FAFC}
+
+.page-heading-pro{padding:1.1rem 0 .7rem;margin:.55rem 0 .65rem;border-bottom:0}
+.page-heading-pro h2{font-size:1.7rem;line-height:1.1}
+.page-kicker{font-size:.64rem;font-weight:850;letter-spacing:.115em;color:#668098;margin-bottom:.26rem}
+.page-actions{display:flex;align-items:center;justify-content:flex-end;gap:.45rem;flex-wrap:wrap}
+.context-pill.live{background:#ECF8F4;border-color:#BFE6D9;color:#27705D}
+.context-pill.live::first-letter{color:#30A173}
+.technical-tag{display:inline-flex;align-items:center;border:1px solid #D9E3EC;background:#F7F9FB;border-radius:6px;padding:.23rem .42rem;color:#728293;font-family:ui-monospace,SFMono-Regular,Menlo,monospace;font-size:.61rem;font-weight:700;white-space:nowrap}
+
+/* Home / product shell */
+.hero-pro{margin-top:.7rem;padding:2.25rem 2.35rem;border-color:#D9E4EC;box-shadow:0 12px 35px rgba(24,54,82,.065)}
+.hero-pro .hero-grid{grid-template-columns:minmax(0,1.08fr) minmax(390px,.92fr)}
+.hero-pro h1{font-size:3.1rem;max-width:720px}
+.hero-badges{display:flex;gap:.45rem;flex-wrap:wrap;margin-top:1.25rem}
+.hero-badge{display:inline-flex;border:1px solid #DCE5EC;background:#F7F9FB;border-radius:999px;padding:.34rem .58rem;color:#63788A;font-size:.67rem;font-weight:750}
+.hero-badge.primary{background:#EDF4FF;border-color:#C8D9F9;color:#285CAF}
+.hero-clinical-card{border:1px solid #D8E3EB;background:#F9FBFD;border-radius:16px;padding:1rem;box-shadow:0 7px 20px rgba(20,49,74,.05)}
+.hero-clinical-card-top{display:flex;align-items:center;justify-content:space-between;gap:.7rem;padding:.1rem .1rem .7rem;margin-bottom:.45rem;border-bottom:1px solid #E5EBF0;font-size:.74rem;color:#41596D}
+.pulse-dot{display:inline-block;width:8px;height:8px;margin-right:.4rem;border-radius:50%;background:#36A176;box-shadow:0 0 0 4px #E7F5EF}
+.hero-path-pro{border:0;background:transparent;padding:.15rem}
+.hero-path-pro .hero-path-step{box-shadow:0 1px 2px rgba(15,45,70,.025)}
+.hero-path-connector{width:1px;height:12px;background:#D8E1E8;margin:-.35rem 0 -.35rem 21px}
+.metric-grid{display:grid;grid-template-columns:repeat(4,minmax(0,1fr));gap:.8rem;margin:1rem 0}
+.metric-card{display:flex;align-items:center;gap:.85rem;background:#fff;border:1px solid #DCE5EC;border-radius:13px;padding:.9rem 1rem;box-shadow:0 2px 9px rgba(25,52,78,.035)}
+.metric-icon.pro{width:40px;height:40px;border-radius:10px;font-size:.63rem;letter-spacing:.04em;background:#EFF4F8;color:#2D5678;border:1px solid #DCE6ED}
+.metric-card>div{display:flex;flex-direction:column;gap:.12rem}
+.metric-card .shiny-text-output{font-size:1.35rem;font-weight:850;line-height:1;color:#173A5E}
+.metric-label{font-size:.68rem;color:#738597;font-weight:700}
+.home-pro-grid{display:grid;grid-template-columns:minmax(0,1.55fr) minmax(330px,.45fr);gap:1rem}
+.section-title-row{display:flex;align-items:flex-start;justify-content:space-between;gap:1rem}
+.architecture-shell,.proof-shell{margin:0}
+.proof-list{display:flex;flex-direction:column;gap:.68rem;margin-top:1rem}
+.proof-item{display:flex;gap:.65rem;align-items:flex-start;border-top:1px solid #E8EDF1;padding-top:.68rem}
+.proof-item:first-child{border-top:0;padding-top:0}
+.proof-item>span{width:23px;height:23px;display:flex;align-items:center;justify-content:center;border-radius:50%;background:#ECF8F4;color:#28765F;font-weight:850;font-size:.68rem;flex:0 0 auto}
+.proof-item strong{display:block;font-size:.76rem;color:#29465F}
+.proof-item small{display:block;color:#7C8C9A;margin-top:.1rem}
+
+/* Shared professional panels */
+.panel-heading-inline{display:flex;align-items:flex-start;justify-content:space-between;gap:.8rem;margin-bottom:.85rem;padding-bottom:.72rem;border-bottom:1px solid #E6ECF1}
+.panel-heading-inline strong{display:block;color:#28465F;font-size:.82rem}
+.panel-heading-inline small{display:block;color:#81909E;font-size:.67rem;margin-top:.08rem}
+.section-divider-label{display:flex;align-items:baseline;justify-content:space-between;gap:1rem;margin:1.05rem .1rem .65rem;border-bottom:1px solid #DEE6ED;padding-bottom:.48rem}
+.section-divider-label span{font-size:.72rem;font-weight:850;letter-spacing:.065em;text-transform:uppercase;color:#526B80}
+.section-divider-label small{color:#8A98A6}
+.workflow-panel,.booking-filter-panel,.booking-results-panel,.appointments-panel,.clinical-side-panel,.clinical-main-panel,.timeline-panel,.agenda-table-panel,.appointment-inspector{background:#fff;border:1px solid #DCE5EC;border-radius:14px;padding:1rem;box-shadow:0 2px 10px rgba(26,53,78,.04)}
+.workflow-panel-accent,.booking-results-panel{border-top:3px solid #5C8CE5}
+.workflow-panel-title{font-size:.75rem;font-weight:850;color:#294860;text-transform:uppercase;letter-spacing:.055em;margin-bottom:.9rem}
+.workflow-header{display:flex;align-items:center;gap:.7rem;border:1px solid #DDE6ED;background:#F9FBFC;border-radius:12px;padding:.65rem .75rem;margin:.2rem 0 1rem}
+.workflow-number{display:flex;align-items:center;justify-content:center;width:30px;height:30px;border-radius:50%;background:#EAF2FE;color:#285CAC;font-size:.68rem;font-weight:850;flex:0 0 auto}
+.workflow-header strong{display:block;font-size:.73rem;color:#36536B}.workflow-header span{display:block;font-size:.62rem;color:#8493A1}
+.workflow-line{height:1px;background:#CDD9E3;flex:1;min-width:35px}
+.inspector-separator{height:1px;background:#E7ECF0;margin:1rem 0}
+
+/* KPI operational strip */
+.kpi-panel{margin:.15rem 0 .9rem}
+.kpi-panel-title{font-size:.65rem;letter-spacing:.07em;text-transform:uppercase;font-weight:850;color:#788A9B;margin:0 0 .45rem .1rem}
+.kpi-strip{display:grid;grid-template-columns:repeat(6,minmax(0,1fr));gap:.5rem}
+.kpi-item{position:relative;background:#fff;border:1px solid #DDE5EC;border-radius:11px;padding:.72rem .78rem;min-height:68px;overflow:hidden}
+.kpi-item::after{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:#A9B7C4}
+.kpi-value{display:block;font-size:1.28rem;font-weight:850;line-height:1.1;color:#213E58}.kpi-label{display:block;font-size:.63rem;color:#7A8A98;margin-top:.22rem;font-weight:650}
+.kpi-item.tone-blue::after{background:#3E78D4}.kpi-item.tone-teal::after{background:#2E9185}.kpi-item.tone-amber::after{background:#C38A2C}.kpi-item.tone-red::after{background:#C95961}.kpi-item.tone-navy::after{background:#1E4669}
+
+/* Professional week calendar */
+.week-calendar-shell{background:#fff;border:1px solid #D8E3EB;border-radius:14px;overflow:hidden;box-shadow:0 2px 10px rgba(22,50,76,.04);margin:.45rem 0 1rem}
+.week-calendar-toolbar{display:flex;align-items:center;justify-content:space-between;gap:1rem;padding:.85rem 1rem;border-bottom:1px solid #DEE6ED;background:#FAFCFD}
+.week-calendar-title{font-size:.82rem;font-weight:850;color:#274760}.week-calendar-range{font-size:.64rem;color:#8292A0;margin-top:.06rem}
+.week-calendar-legend{display:flex;gap:.7rem;align-items:center;flex-wrap:wrap}.legend-dot{display:inline-flex;align-items:center;gap:.3rem;font-size:.61rem;color:#708190}.legend-dot::before{content:"";width:7px;height:7px;border-radius:2px;background:#A8B4BF}.legend-dot.booked::before{background:#4479D0}.legend-dot.active::before{background:#C58A27}.legend-dot.done::before{background:#318E83}.legend-dot.cancelled::before{background:#C95861}
+.week-calendar-scroll{overflow:auto;max-height:650px}.week-calendar-board{display:grid;grid-template-columns:68px repeat(var(--days),minmax(170px,1fr));min-width:930px;background:#fff}
+.week-time-wrap{position:sticky;left:0;z-index:5;background:#F8FAFC;border-right:1px solid #DEE6ED}.week-time-header{height:58px;display:flex;align-items:center;justify-content:center;border-bottom:1px solid #DEE6ED;color:#8292A1;font-size:.59rem;text-transform:uppercase;letter-spacing:.06em;font-weight:800}.week-time-rail{position:relative}.week-time-label{position:absolute;left:0;right:0;transform:translateY(-8px);text-align:center;color:#8796A3;font-size:.58rem;font-variant-numeric:tabular-nums}
+.week-day-wrap{min-width:0;border-right:1px solid #E2E9EF}.week-day-wrap:last-child{border-right:0}.week-day-header{height:58px;display:grid;grid-template-columns:auto auto 1fr;grid-template-rows:auto auto;column-gap:.3rem;align-content:center;padding:.5rem .65rem;border-bottom:1px solid #DEE6ED;background:#FBFCFD;position:sticky;top:0;z-index:3}.week-day-header.is-today{background:#EDF4FF}.week-day-name{font-size:.57rem;letter-spacing:.075em;color:#7F8E9C;font-weight:850;grid-column:1}.week-day-number{font-size:1.08rem;font-weight:850;color:#23445F;line-height:1;grid-column:2}.week-day-month{font-size:.57rem;color:#8796A4;font-weight:800;grid-column:3}.week-day-count{font-size:.58rem;color:#6E8292;grid-column:1/4;margin-top:.1rem}
+.week-day-column{position:relative;background-image:repeating-linear-gradient(to bottom,#fff 0,#fff calc(var(--hour-height) - 1px),#E9EEF2 calc(var(--hour-height) - 1px),#E9EEF2 var(--hour-height));background-size:100% var(--hour-height)}
+.week-day-column::after{content:"";position:absolute;inset:0;background-image:repeating-linear-gradient(to bottom,transparent 0,transparent calc(var(--hour-height)/2 - 1px),rgba(226,233,239,.48) calc(var(--hour-height)/2 - 1px),rgba(226,233,239,.48) calc(var(--hour-height)/2));pointer-events:none}
+.week-event{position:absolute;z-index:2;border:1px solid #BFD1F0;border-left:3px solid #477BCE;background:#EFF5FF;border-radius:8px;padding:.3rem .38rem;overflow:hidden;box-shadow:0 2px 5px rgba(25,54,82,.06);transition:transform .14s ease,box-shadow .14s ease;min-width:0}
+.week-event:hover{z-index:10;transform:translateY(-1px);box-shadow:0 6px 15px rgba(25,54,82,.13)}
+.week-event-time{font-size:.55rem;font-weight:850;color:#315D9D;font-variant-numeric:tabular-nums}.week-event-patient{font-size:.68rem;font-weight:850;color:#284762;white-space:nowrap;text-overflow:ellipsis;overflow:hidden;margin-top:.08rem}.week-event-service{font-size:.58rem;color:#63788A;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}.week-event-meta{font-size:.52rem;color:#758697;margin-top:.12rem;white-space:nowrap;text-overflow:ellipsis;overflow:hidden}
+.week-event.event-in-progress{background:#FFF7E9;border-color:#E8CB94;border-left-color:#C58A27}.week-event.event-in-progress .week-event-time{color:#946514}.week-event.event-fulfilled,.week-event.event-finished{background:#EBF8F5;border-color:#BCE4DC;border-left-color:#318E83}.week-event.event-fulfilled .week-event-time,.week-event.event-finished .week-event-time{color:#256E66}.week-event.event-cancelled,.week-event.event-declined{background:#FFF1F2;border-color:#F0C4C8;border-left-color:#C95861;opacity:.72}.week-event.event-cancelled .week-event-time,.week-event.event-declined .week-event-time{color:#A64249}
+
+/* Scheduler inspector */
+.appointment-inspector{position:sticky;top:86px;align-self:start}.inspector-title{font-size:.67rem;font-weight:850;text-transform:uppercase;letter-spacing:.06em;color:#718496;padding-bottom:.55rem;border-bottom:1px solid #E6ECF1;margin-bottom:.8rem}.inspector-empty{display:flex;flex-direction:column;align-items:center;text-align:center;padding:1.6rem .5rem;color:#8695A3}.inspector-empty-icon{width:38px;height:38px;border-radius:50%;background:#F1F5F8;display:flex;align-items:center;justify-content:center;margin-bottom:.5rem;color:#6F8596}.inspector-empty strong{color:#526B7E}.inspector-empty span{font-size:.66rem;margin-top:.15rem}
+.appointment-profile{display:grid;grid-template-columns:auto 1fr;gap:.65rem;align-items:center}.patient-avatar{width:40px;height:40px;border-radius:11px;display:flex;align-items:center;justify-content:center;background:#EAF2FE;color:#285DAF;font-weight:850;font-size:.72rem;border:1px solid #CCDAF3}.patient-avatar.large{width:48px;height:48px;font-size:.78rem}.appointment-profile-main strong{display:block;color:#294A63;font-size:.78rem}.appointment-profile-main span{display:block;color:#7A8C9A;font-size:.63rem}.appointment-profile>.status-chip{grid-column:1/3;justify-self:start}.appointment-facts{grid-column:1/3;display:grid;grid-template-columns:1fr 1fr;gap:.45rem;margin-top:.3rem}.appointment-facts>div{background:#F8FAFC;border:1px solid #E6ECF1;border-radius:8px;padding:.5rem}.appointment-facts span{display:block;font-size:.56rem;text-transform:uppercase;letter-spacing:.05em;color:#8A98A5;font-weight:750}.appointment-facts strong,.appointment-facts code{display:block;margin-top:.12rem;font-size:.66rem;color:#405B70;word-break:break-word}
+
+/* Booking / patient */
+.booking-stepper{display:flex;align-items:center;background:#fff;border:1px solid #DCE5EC;border-radius:13px;padding:.62rem .8rem;margin:.2rem 0 1rem;box-shadow:0 2px 8px rgba(25,52,77,.03)}.booking-step{display:flex;align-items:center;gap:.45rem;min-width:128px;color:#8493A0}.booking-step>span{width:27px;height:27px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#F1F4F6;border:1px solid #DCE4EA;font-size:.64rem;font-weight:850}.booking-step strong{display:block;font-size:.66rem;color:#63798A}.booking-step small{display:block;font-size:.55rem}.booking-step.active>span{background:#EAF2FE;border-color:#C1D4F6;color:#285DAC}.booking-step.active strong{color:#2C587C}.booking-step-line{height:1px;background:#DCE5EC;flex:1;min-width:20px}.appointments-panel{margin-top:1rem}
+.availability-summary{display:flex;align-items:center;gap:.65rem;padding:.68rem .75rem;border:1px solid #C7E5D9;background:#F1FAF6;border-radius:10px;margin-bottom:.75rem;color:#356A58}.availability-summary-icon{width:30px;height:30px;border-radius:9px;background:#DDF3E9;color:#28745E;display:flex;align-items:center;justify-content:center;font-weight:900}.availability-summary strong{display:block;font-size:.73rem}.availability-summary span{display:block;font-size:.61rem;color:#6D877C;margin-top:.05rem}.confirmation-pro{display:flex;gap:.7rem;align-items:flex-start;margin-top:.85rem}.confirmation-icon{width:34px;height:34px;border-radius:50%;background:#DDF3E6;color:#277052;display:flex;align-items:center;justify-content:center;font-weight:900;flex:0 0 auto}.confirmation-pro h4{margin-top:.05rem}
+
+/* Clinical command center */
+.clinical-command-grid{display:grid;grid-template-columns:minmax(320px,.38fr) minmax(0,.62fr);gap:1rem;margin-top:1rem}.clinical-side-panel,.clinical-main-panel{min-width:0}.vitals-grid{display:grid;grid-template-columns:1fr 1fr;gap:.7rem;margin-bottom:1rem}.vital-input{position:relative;border:1px solid #E1E8EE;background:#FAFCFD;border-radius:11px;padding:.7rem .75rem .2rem}.vital-input .form-group{margin-bottom:.45rem}.vital-icon{position:absolute;right:.65rem;top:.55rem;font-size:.56rem;font-weight:850;letter-spacing:.06em;color:#7990A2;background:#EDF2F6;border-radius:5px;padding:.16rem .3rem}.clinical-action-row{display:flex;gap:.55rem;justify-content:flex-end;margin-top:.6rem}.clinical-action-row .btn{flex:1}.encounter-empty{display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;border:1px dashed #D8E1E8;background:#FBFCFD;border-radius:11px;padding:1.3rem;margin-bottom:.9rem;color:#7C8D9B}.encounter-empty-icon{width:36px;height:36px;border-radius:50%;display:flex;align-items:center;justify-content:center;background:#EEF3F7;color:#5C788E;font-size:1rem;margin-bottom:.35rem}.encounter-empty strong{color:#516D81}.encounter-empty span{font-size:.64rem;margin-top:.12rem}.encounter-patient-card{display:grid;grid-template-columns:auto 1fr auto;gap:.7rem;align-items:center;border:1px solid #C9DCF7;background:#F4F8FE;border-radius:11px;padding:.72rem .8rem;margin-bottom:.9rem}.encounter-label{font-size:.55rem;text-transform:uppercase;letter-spacing:.07em;color:#7390A8;font-weight:800;display:block}.encounter-patient-main strong{display:block;font-size:.78rem;color:#274B68}.encounter-patient-main code{font-size:.58rem;color:#70879A}.encounter-status{text-align:right}.encounter-status code{display:block;margin-top:.2rem;font-size:.56rem;color:#748A9C}.transaction-empty{display:flex;align-items:center;gap:.55rem;padding:.65rem .7rem;border:1px dashed #DCE4EA;border-radius:9px;color:#81909D;font-size:.64rem;margin-top:.8rem}.transaction-empty span{font-weight:800;color:#5F7689}.proposal-box-pro{border:1px solid #D9E3EA;border-radius:10px;overflow:hidden}.proposal-header{display:flex;align-items:center;justify-content:space-between;padding:.55rem .65rem;background:#F8FAFC;border-bottom:1px solid #E2E8ED}.review-state{font-size:.56rem;letter-spacing:.06em;font-weight:850;color:#956817}.timeline-panel{margin-top:1rem}.timeline-pro{display:grid;grid-template-columns:repeat(auto-fit,minmax(245px,1fr));gap:.65rem;margin:0;padding:0}.timeline-pro .timeline-item{border:0;padding:0 0 0 1rem}.timeline-pro .timeline-dot{left:0;top:13px;width:7px;height:7px;box-shadow:0 0 0 3px #EDF3FA}.timeline-card{border:1px solid #E0E8EE;background:#FBFCFD;border-radius:9px;padding:.65rem .7rem}.timeline-card-top{display:flex;justify-content:space-between;gap:.5rem}.timeline-card-top strong{font-size:.69rem}.timeline-type{font-size:.52rem;text-transform:uppercase;letter-spacing:.05em;color:#8595A2;font-weight:800}.timeline-meta{display:flex;justify-content:space-between;gap:.5rem;margin-top:.32rem;color:#82919D;font-size:.56rem}.timeline-meta code{font-size:.54rem;color:#647C8E}
+
+/* FHIR Studio professional workbench */
+.studio-command-strip{display:grid;grid-template-columns:repeat(4,1fr);gap:.55rem;margin:.15rem 0 .9rem}.studio-command-strip>div{display:grid;grid-template-columns:auto 1fr;column-gap:.5rem;align-items:center;border:1px solid #DCE5EC;background:#fff;border-radius:10px;padding:.58rem .65rem}.studio-command-strip>div>span{grid-row:1/3;width:27px;height:27px;border-radius:7px;display:flex;align-items:center;justify-content:center;background:#EEF3F7;color:#47647A;font-size:.59rem;font-weight:850}.studio-command-strip strong{font-size:.68rem;color:#38566D}.studio-command-strip small{font-size:.56rem;color:#8695A2}.studio-code-panel{border:1px solid #D9E2E9;border-radius:10px;overflow:hidden;background:#122033}.studio-code-header{display:flex;justify-content:space-between;align-items:center;padding:.55rem .75rem;background:#192A3B;color:#D8E4ED;border-bottom:1px solid #2B3B4D;font-size:.65rem}.studio-code-header span{color:#8198AA;font-size:.57rem}.studio-code-panel .json-view{border:0;border-radius:0;margin:0}.architecture-panel-pro{padding:1.2rem}.architecture-comparison{display:grid;grid-template-columns:1fr auto 1fr;gap:1rem;align-items:center}.architecture-card{border:1px solid #DCE5EC;background:#fff;border-radius:12px;padding:1rem}.architecture-card.current{border-top:3px solid #4A7ACB}.architecture-card.target{border-top:3px solid #2F8B80}.architecture-card-label{font-size:.57rem;letter-spacing:.075em;color:#8292A0;font-weight:850}.architecture-card h4{font-size:.9rem;margin:.2rem 0 .7rem;color:#294A63}.architecture-card pre{margin:0;font-size:.7rem;line-height:1.55}.architecture-evolve{display:flex;flex-direction:column;align-items:center;color:#7690A3;font-size:1.2rem}.architecture-evolve small{font-size:.49rem;font-weight:850;letter-spacing:.07em}.architecture-note{margin-top:.8rem;border:1px solid #D8E6E3;background:#F4FAF8;border-radius:9px;padding:.7rem .8rem;color:#507169;font-size:.67rem}
+
+/* Tables in professional surfaces */
+.agenda-table-panel .dataTables_wrapper,.clinical-side-panel .dataTables_wrapper,.appointments-panel .dataTables_wrapper{font-size:.72rem}.agenda-table-panel .dataTable tbody tr,.clinical-side-panel .dataTable tbody tr{cursor:pointer}.dataTables_wrapper .dataTables_info{font-size:.62rem;color:#8493A0}.dataTables_wrapper .dataTables_paginate .paginate_button{border-radius:6px!important;font-size:.62rem!important;padding:.25rem .46rem!important}
+
+/* Responsive professional layer */
+@media(max-width:1200px){.kpi-strip{grid-template-columns:repeat(3,1fr)}.home-pro-grid{grid-template-columns:1fr}.clinical-command-grid{grid-template-columns:1fr}.appointment-inspector{position:static}.metric-grid{grid-template-columns:repeat(2,1fr)}}
+@media(max-width:900px){.hero-pro .hero-grid{grid-template-columns:1fr}.studio-command-strip{grid-template-columns:repeat(2,1fr)}.architecture-comparison{grid-template-columns:1fr}.architecture-evolve{transform:rotate(90deg)}.booking-stepper{overflow-x:auto}.booking-step{min-width:120px}.page-actions{justify-content:flex-start}.week-calendar-scroll{max-height:540px}}
+@media(max-width:650px){.kpi-strip{grid-template-columns:repeat(2,1fr)}.metric-grid{grid-template-columns:1fr}.studio-command-strip{grid-template-columns:1fr}.vitals-grid{grid-template-columns:1fr}.clinical-action-row{flex-direction:column}.appointment-facts{grid-template-columns:1fr}.hero-pro{padding:1.35rem}.hero-pro h1{font-size:2.15rem}.week-calendar-board{min-width:850px}.workflow-header{overflow-x:auto}.booking-stepper{padding:.55rem}.booking-step-line{min-width:12px}}
+.ai-safety-banner{display:flex;gap:.35rem;align-items:center;border:1px solid #D8E5E1;background:#F4FAF8;color:#54746B;border-radius:10px;padding:.65rem .75rem;margin:.15rem 0 .9rem;font-size:.67rem}.ai-safety-banner strong{color:#35675A}.ai-output{background:#F8FAFC!important;border-color:#DEE6EC!important;color:#40586C}.source-list{padding-top:.3rem}.proposal-box{border:1px solid #DCE4EA;border-radius:9px;padding:.75rem;background:#FBFCFD}
+</style><style>body{margin:0}.preview-wrap{max-width:1480px;margin:auto;padding:0 24px 50px}.mock-nav{display:flex;gap:20px;align-items:center;background:#fff;border-bottom:1px solid #d9e2ea;padding:12px 24px;position:sticky;top:0;z-index:20}.mock-nav .links{display:flex;gap:8px;font-size:13px;color:#536477}.mock-nav .links b{background:#eef4ff;color:#245ac2;border-radius:8px;padding:8px 11px}.mock-nav .links span{padding:8px 11px}.mock-event{position:absolute;left:4%;width:91%;border:1px solid #bfd1f0;border-left:3px solid #477bce;background:#eff5ff;border-radius:8px;padding:6px;box-sizing:border-box;font-size:10px}.mock-event.done{background:#ebf8f5;border-color:#bce4dc;border-left-color:#318e83}.mock-event.cancel{background:#fff1f2;border-color:#f0c4c8;border-left-color:#c95861} </style></head><body>
+<div class="mock-nav"><div class="brand"><span class="brand-mark">FHIR</span><span>FHIR Clinical Flow</span></div><div class="links"><span>Inicio</span><span>Portal Paciente</span><b>Agendador</b><span>Portal Clínico</span><span>FHIR Studio</span></div></div>
+<div class="demo-strip"><span>FHIR R4 4.0.1</span><span>SIMULATED FHIR CORE</span><span>SYNTHETIC DATA ONLY</span><span>FHIR CAMP</span></div>
+<div class="preview-wrap">
+<div class="page-heading page-heading-pro"><div><div class="page-kicker">OPERACIÓN DE AGENDAMIENTO</div><h2>Consola del agendador</h2><p>Vista operativa común para call center, admisiones, recepción y HIS sobre un único FHIR Store.</p></div><div class="page-actions"><span class="context-pill live">● Store sincronizado</span><span class="context-pill">FHIR R4</span></div></div>
+<div class="kpi-panel"><div class="kpi-panel-title">Pulso de la agenda</div><div class="kpi-strip"><div class="kpi-item tone-navy"><span class="kpi-value">12</span><span class="kpi-label">Total</span></div><div class="kpi-item tone-blue"><span class="kpi-value">4</span><span class="kpi-label">Hoy</span></div><div class="kpi-item tone-blue"><span class="kpi-value">7</span><span class="kpi-label">Reservadas</span></div><div class="kpi-item tone-amber"><span class="kpi-value">1</span><span class="kpi-label">En atención</span></div><div class="kpi-item tone-teal"><span class="kpi-value">3</span><span class="kpi-label">Atendidas</span></div><div class="kpi-item tone-red"><span class="kpi-value">1</span><span class="kpi-label">Canceladas</span></div></div></div>
+<div class="week-calendar-shell"><div class="week-calendar-toolbar"><div><div class="week-calendar-title">Agenda semanal</div><div class="week-calendar-range">08 Oct – 12 Oct 2026</div></div><div class="week-calendar-legend"><span class="legend-dot booked">Reservada</span><span class="legend-dot active">En atención</span><span class="legend-dot done">Atendida</span><span class="legend-dot cancelled">Cancelada</span></div></div><div class="week-calendar-scroll"><div class="week-calendar-board" style="--days:5"><div class="week-time-wrap"><div class="week-time-header">Hora</div><div class="week-time-rail" style="height:544px"><div class="week-time-label" style="top:0px">07:00</div><div class="week-time-label" style="top:68px">08:00</div><div class="week-time-label" style="top:136px">09:00</div><div class="week-time-label" style="top:204px">10:00</div><div class="week-time-label" style="top:272px">11:00</div><div class="week-time-label" style="top:340px">12:00</div><div class="week-time-label" style="top:408px">13:00</div><div class="week-time-label" style="top:476px">14:00</div></div></div><div class="week-day-wrap"><div class="week-day-header is-today"><span class="week-day-name">JUE</span><span class="week-day-number">08</span><span class="week-day-month">OCT</span><span class="week-day-count">4 citas</span></div><div class="week-day-column" style="height:544px;--hour-height:68px"><div class="mock-event" style="top:34px;height:58px"><b>08:30–09:15</b><br><strong>Carlos Andrade</strong><br>Cardiología · booked</div><div class="mock-event done" style="top:120px;height:52px"><b>09:45–10:30</b><br><strong>María Torres</strong><br>Medicina general</div></div></div><div class="week-day-wrap"><div class="week-day-header "><span class="week-day-name">VIE</span><span class="week-day-number">09</span><span class="week-day-month">OCT</span><span class="week-day-count">3 citas</span></div><div class="week-day-column" style="height:544px;--hour-height:68px"><div class="mock-event" style="top:80px;height:54px"><b>09:10–09:55</b><br><strong>Paciente demo</strong><br>Pediatría</div></div></div><div class="week-day-wrap"><div class="week-day-header "><span class="week-day-name">SÁB</span><span class="week-day-number">10</span><span class="week-day-month">OCT</span><span class="week-day-count">2 citas</span></div><div class="week-day-column" style="height:544px;--hour-height:68px"><div class="mock-event" style="top:80px;height:54px"><b>09:10–09:55</b><br><strong>Paciente demo</strong><br>Pediatría</div></div></div><div class="week-day-wrap"><div class="week-day-header "><span class="week-day-name">DOM</span><span class="week-day-number">11</span><span class="week-day-month">OCT</span><span class="week-day-count">1 citas</span></div><div class="week-day-column" style="height:544px;--hour-height:68px"><div class="mock-event" style="top:80px;height:54px"><b>09:10–09:55</b><br><strong>Paciente demo</strong><br>Pediatría</div></div></div><div class="week-day-wrap"><div class="week-day-header "><span class="week-day-name">LUN</span><span class="week-day-number">12</span><span class="week-day-month">OCT</span><span class="week-day-count">2 citas</span></div><div class="week-day-column" style="height:544px;--hour-height:68px"><div class="mock-event" style="top:80px;height:54px"><b>09:10–09:55</b><br><strong>Paciente demo</strong><br>Pediatría</div></div></div></div></div></div>
+<div class="section-divider-label"><span>Detalle y gestión</span><small>Seleccione una cita en la tabla para operar sobre ella</small></div>
+<div style="display:grid;grid-template-columns:3fr 1fr;gap:16px"><div class="agenda-table-panel"><div class="panel-heading-inline"><div><strong>Citas del repositorio</strong><small>Appointment · todos los canales</small></div><span class="technical-tag">FHIR Search view</span></div><table style="width:100%;border-collapse:collapse;font-size:12px"><thead><tr style="text-align:left;background:#f6f9fc;color:#586b7d"><th style="padding:10px">Paciente</th><th>Fecha</th><th>Inicio</th><th>Servicio</th><th>Estado</th><th>Canal</th></tr></thead><tbody><tr><td style="padding:12px;border-bottom:1px solid #edf1f5">Carlos Andrade</td><td>2026-10-08</td><td>08:30</td><td>Cardiología</td><td><span class="status-chip status-booked">booked</span></td><td>web</td></tr><tr><td style="padding:12px">María Torres</td><td>2026-10-08</td><td>09:45</td><td>Medicina general</td><td><span class="status-chip status-fulfilled">fulfilled</span></td><td>call-center</td></tr></tbody></table></div><aside class="appointment-inspector"><div class="inspector-title">Cita seleccionada</div><div class="appointment-profile"><div class="patient-avatar">CA</div><div class="appointment-profile-main"><strong>Carlos Andrade</strong><span>Cardiología</span></div><span class="status-chip status-booked">booked</span><div class="appointment-facts"><div><span>Fecha</span><strong>2026-10-08 08:30</strong></div><div><span>Fin</span><strong>09:15</strong></div><div><span>Canal</span><strong>web</strong></div><div><span>FHIR</span><code>Appointment/app-001</code></div></div></div></aside></div>
+</div></body></html>

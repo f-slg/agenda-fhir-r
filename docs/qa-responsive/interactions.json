@@ -1,0 +1,60 @@
+[
+  {
+    "check": "Patient booking",
+    "pass": true
+  },
+  {
+    "check": "Shared Appointment selection and cancellation",
+    "pass": true
+  },
+  {
+    "check": "Encounter + clinical Bundle transaction",
+    "pass": true
+  },
+  {
+    "check": "JSON clipboard and download",
+    "pass": true
+  },
+  {
+    "check": "Concurrent calendar 1920x1080",
+    "pass": true,
+    "events": 15,
+    "overlaps": 0,
+    "globalOverflow": false
+  },
+  {
+    "check": "Concurrent calendar 1600x900",
+    "pass": true,
+    "events": 15,
+    "overlaps": 0,
+    "globalOverflow": false
+  },
+  {
+    "check": "Concurrent calendar 1440x900",
+    "pass": true,
+    "events": 15,
+    "overlaps": 0,
+    "globalOverflow": false
+  },
+  {
+    "check": "Concurrent calendar 1366x768",
+    "pass": true,
+    "events": 15,
+    "overlaps": 0,
+    "globalOverflow": false
+  },
+  {
+    "check": "Concurrent calendar 1280x800",
+    "pass": true,
+    "events": 15,
+    "overlaps": 0,
+    "globalOverflow": false
+  },
+  {
+    "check": "Concurrent calendar 1024x768",
+    "pass": true,
+    "events": 15,
+    "overlaps": 0,
+    "globalOverflow": false
+  }
+]
