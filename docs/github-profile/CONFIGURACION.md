@@ -6,7 +6,7 @@ El README de esta carpeta se publicó como presentación de Fabrizio Salas Guerr
 
 - **Nombre:** Fabrizio Salas Guerrero
 - **Bio:** Médico epidemiólogo | Presidente de HL7 Ecuador | Salud digital, interoperabilidad e IA | R y Shiny
-- **Repositorio destacado:** agenda-fhir-r
+- **Sección de proyectos:** colección ampliable, sin jerarquizar Agenda FHIR sobre los demás proyectos.
 
 El titular confirmó que el perfil de LinkedIn fslg y la biografía de Ronald Fabricio Salas Guerrero en la Universidad Nacional de Loja corresponden a su trayectoria. Se conserva «Fabrizio Salas Guerrero» como nombre de presentación solicitado. La bio lateral de GitHub requiere actualizarse desde la configuración de la cuenta; el README no modifica ese campo.
 
