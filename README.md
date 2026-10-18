@@ -1,5 +1,5 @@
 <p align="center">
-  <img src="www/hl7-fhir-logo.png" width="130" alt="HL7 FHIR">
+  <img src="www/logo.png" width="150" alt="logo de Agenda FHIR">
 </p>
 
 <h1 align="center">Agenda FHIR</h1>
@@ -136,4 +136,4 @@ docs/        Arquitectura, decisiones, guiones y evidencias
 
 Proyecto de **FHIR TEAM** para compartir aprendizaje sobre agendas clínicas, modelado FHIR y prototipado en R/Shiny. Se pueden proponer mejoras mediante Issues o Pull Requests, utilizando únicamente ejemplos sintéticos.
 
-El logo HL7 FHIR se utiliza como referencia al estándar; el proyecto no implica afiliación ni aval oficial de HL7.
+El logo HL7 FHIR se utiliza como referencia al estándar; el proyecto no implica afiliación ni aval oficial de HL7. El logo propio del proyecto (`www/logo.png`) se genera con `docs/logo/logo.R` y no usa marcas de HL7.
