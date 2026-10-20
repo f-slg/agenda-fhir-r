@@ -91,7 +91,7 @@ La interfaz usa R/Shiny, bslib, Bootstrap 5, HTML y CSS. El FHIR Core está impl
 - La presión arterial es el signo vital editable del flujo actual; otros signos se muestran desde Observation si existen.
 - Al iniciar la atención, la regla actual marca Appointment como fulfilled mientras Encounter pasa a in-progress. Los KPI de citas deben interpretarse con esa limitación.
 
-Los [hallazgos y limitaciones conocidos](docs/ISSUES_PREEXISTENTES.md) están documentados por separado.
+Los [hallazgos y limitaciones conocidos](docs/LIMITACIONES.md) están documentados por separado.
 
 ## AI Copilot
 
@@ -108,7 +108,7 @@ Rscript scripts/03_tests.R
 
 Incluyen reserva y cancelación, liberación de Slot, búsquedas entre módulos, transacción clínica, geometría de agenda y carga de recursos de interfaz.
 
-Los scripts `04_visual_qa.cjs`, `06_interaction_qa.cjs` y `07_startup_qa.cjs` son herramientas opcionales de desarrollo con Playwright; no son dependencias de ejecución de la aplicación. Consulte la [matriz QA](docs/QA_RESPONSIVE.md).
+Los scripts `04_visual_qa.cjs`, `06_interaction_qa.cjs` y `07_startup_qa.cjs` son herramientas opcionales de desarrollo con Playwright; no son dependencias de ejecución de la aplicación.
 
 ## Estructura
 
@@ -129,11 +129,18 @@ docs/        Arquitectura, decisiones, guiones y evidencias
 - [Modelo FHIR](docs/fhir-model.md)
 - [Decisiones de modelado](docs/fhir-decisions.md)
 - [Guion de demostración](docs/demo-script.md)
-- [Interfaz y diseño responsive](docs/RESPONSIVE_UI.md)
-- [Limitaciones conocidas](docs/ISSUES_PREEXISTENTES.md)
+- [Supuestos del caso](docs/assumptions.md)
+- [Limitaciones conocidas](docs/LIMITACIONES.md)
 
-## Equipo y contribuciones
+## Origen y equipo
 
-Proyecto de **FHIR TEAM** para compartir aprendizaje sobre agendas clínicas, modelado FHIR y prototipado en R/Shiny. Se pueden proponer mejoras mediante Issues o Pull Requests, utilizando únicamente ejemplos sintéticos.
+Este prototipo nació como **proyecto integrador del FHIR Camp de HL7 Colombia**. El caso de **ACME Salud** (sus sedes, servicios, profesionales y pacientes) proviene del enunciado del Camp; es ficticio y se usa aquí con fines educativos.
 
-El logo HL7 FHIR se utiliza como referencia al estándar; el proyecto no implica afiliación ni aval oficial de HL7. El logo propio del proyecto (`www/logo.png`) se genera con `docs/logo/logo.R` y no usa marcas de HL7.
+Fue desarrollado por **FHIR TEAM**, equipo participante del Camp. Se pueden proponer mejoras mediante Issues o Pull Requests, utilizando únicamente ejemplos sintéticos.
+
+## Licencia y aviso
+
+- El código se distribuye bajo [licencia MIT](LICENSE).
+- El caso ACME Salud pertenece al material del FHIR Camp y no está cubierto por esa licencia.
+
+HL7® y FHIR® son marcas registradas de Health Level Seven International. El logo HL7 FHIR se utiliza como referencia al estándar; el proyecto no implica afiliación ni aval oficial de HL7 ni de HL7 Colombia. El logo propio del proyecto (`www/logo.png`) se genera con `docs/logo/logo.R` y no usa marcas de HL7.

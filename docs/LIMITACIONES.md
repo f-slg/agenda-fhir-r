@@ -1,4 +1,4 @@
-# Hallazgos previos separados de la intervención visual
+# Limitaciones conocidas
 
 ## Corregidos en la infraestructura de pruebas
 
