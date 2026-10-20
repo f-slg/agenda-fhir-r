@@ -1,6 +1,6 @@
 # Clinical UI 1.2
 
-La actualización visual está diseñada para que FHIR Clinical Flow se perciba como software clínico profesional y no como una interfaz Shiny genérica.
+La actualización visual está diseñada para que Agenda FHIR se perciba como software clínico profesional y no como una interfaz Shiny genérica.
 
 ## Principios visuales
 

@@ -1,4 +1,4 @@
-cat("=== FHIR Clinical Flow | PRE-FLIGHT ===\n")
+cat("=== Agenda FHIR | PRE-FLIGHT ===\n")
 cat("R:", R.version.string, "\n")
 cat("Directorio:", normalizePath(getwd(), winslash = "/", mustWork = FALSE), "\n")
 cat(".libPaths():\n")

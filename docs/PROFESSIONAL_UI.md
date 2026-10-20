@@ -2,7 +2,7 @@
 
 ## Objetivo
 
-Elevar FHIR Clinical Flow desde una demo funcional a una superficie que visualmente se acerque a software clínico moderno, sin cambiar el modelo FHIR, las transacciones ni la fuente de verdad.
+Elevar Agenda FHIR desde una demo funcional a una superficie que visualmente se acerque a software clínico moderno, sin cambiar el modelo FHIR, las transacciones ni la fuente de verdad.
 
 ## Principios
 

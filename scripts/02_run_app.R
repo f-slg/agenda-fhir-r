@@ -8,7 +8,7 @@ if (length(missing)) {
   )
 }
 
-cat("FHIR Clinical Flow\n")
+cat("Agenda FHIR\n")
 cat("Abriendo http://127.0.0.1:3838\n")
 shiny::runApp(
   appDir = ".",

@@ -1,5 +1,5 @@
 APP_CONFIG <- list(
-  app_name = "FHIR Clinical Flow",
+  app_name = "Agenda FHIR",
   subtitle = "Prototipo integrador de atención y agendamiento basado en HL7 FHIR R4",
   fhir_version = "4.0.1",
   timezone = "America/Guayaquil",

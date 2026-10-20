@@ -1,4 +1,4 @@
-cat("=== FHIR Clinical Flow | instalación limpia ===\n")
+cat("=== Agenda FHIR | instalación limpia ===\n")
 cat("R:", R.version.string, "\n")
 cat("Plataforma:", R.version$platform, "\n\n")
 

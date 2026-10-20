@@ -9,5 +9,5 @@ Rscript scripts/00_install_packages.R
 echo "[2/3] Ejecutando preflight..."
 Rscript scripts/01_preflight.R
 
-echo "[3/3] Iniciando FHIR Clinical Flow..."
+echo "[3/3] Iniciando Agenda FHIR..."
 Rscript scripts/02_run_app.R

@@ -7,7 +7,7 @@ mod_home_ui <- function(id){
         class="hero-grid",
         htmltools::tags$div(
           htmltools::tags$div(class="eyebrow","FHIR CAMP · PROYECTO INTEGRADOR"),
-          htmltools::tags$h1("FHIR Clinical Flow"),
+          htmltools::tags$h1("Agenda FHIR"),
           htmltools::tags$p(class="hero-sub","Una experiencia clínica interoperable, desde la disponibilidad hasta la atención."),
           htmltools::tags$p(class="hero-copy",APP_CONFIG$subtitle),
           htmltools::tags$div(

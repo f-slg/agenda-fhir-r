@@ -1,4 +1,4 @@
-# QA report — FHIR Clinical Flow 0.2.0 clean R45
+# QA report — Agenda FHIR 0.2.0 clean R45
 
 Esta distribución fue preparada para instalación limpia con R >= 4.3 y específicamente orientada a R 4.5.x.
 

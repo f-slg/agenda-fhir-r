@@ -65,7 +65,7 @@ Rscript scripts/02_run_app.R
 
 El instalador requiere acceso a CRAN. La aplicación se abre en `http://127.0.0.1:3838`.
 
-También puede abrir `fhir-clinical-flow.Rproj` en RStudio y pulsar **Run App**, después de instalar los paquetes. Al cambiar archivos de interfaz, detenga y vuelva a iniciar la aplicación.
+También puede abrir `agenda-fhir-r.Rproj` en RStudio y pulsar **Run App**, después de instalar los paquetes. Al cambiar archivos de interfaz, detenga y vuelva a iniciar la aplicación.
 
 Paquetes principales: `shiny`, `bslib`, `jsonlite`, `htmltools` y `DT`. `visNetwork` permite el grafo interactivo; hay una vista textual alternativa. `testthat` se utiliza para pruebas y `httr2` para la integración opcional con Gemini. No es necesario configurar `renv`.
 

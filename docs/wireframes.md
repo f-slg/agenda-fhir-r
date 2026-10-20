@@ -4,7 +4,7 @@
 
 ```text
 ┌──────────────────────────────────────────────────────────────────┐
-│ FHIR Clinical Flow                          Canal: web            │
+│ Agenda FHIR                          Canal: web            │
 ├───────────────────────┬──────────────────────────────────────────┤
 │ Paciente              │ Horarios disponibles                    │
 │ Cobertura             │ ○ 07/10/2026 · 08:00 — 09:00           │

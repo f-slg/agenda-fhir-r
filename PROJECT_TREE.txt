@@ -42,7 +42,7 @@
 ./docs/references.md
 ./docs/speaker-notes.md
 ./docs/wireframes.md
-./fhir-clinical-flow.Rproj
+./agenda-fhir-r.Rproj
 ./modules/mod_ai_copilot.R
 ./modules/mod_audit.R
 ./modules/mod_clinician.R

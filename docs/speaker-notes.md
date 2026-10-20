@@ -1,6 +1,6 @@
-# Notas del presentador — FHIR Clinical Flow
+# Notas del presentador — Agenda FHIR
 
-## 1. FHIR Clinical Flow
+## 1. Agenda FHIR
 El proyecto parte de un requerimiento administrativo sencillo: unificar agendas de tres sedes. La decisión de arquitectura fue evitar tres agendas conectadas por sincronización y construir un único modelo de estado interoperable. En esta demo no afirmamos disponer de un servidor FHIR productivo; simulamos localmente sus operaciones principales para validar el modelo y el flujo.
 
 ## 2. El problema
