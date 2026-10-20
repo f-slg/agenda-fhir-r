@@ -136,7 +136,13 @@ docs/        Arquitectura, decisiones, guiones y evidencias
 
 Este prototipo nació como **proyecto integrador del FHIR Camp de HL7 Colombia**. El caso de **ACME Salud** (sus sedes, servicios, profesionales y pacientes) proviene del enunciado del Camp; es ficticio y se usa aquí con fines educativos.
 
-Fue desarrollado por **FHIR TEAM**, equipo participante del Camp. Se pueden proponer mejoras mediante Issues o Pull Requests, utilizando únicamente ejemplos sintéticos.
+Fue desarrollado por **FHIR TEAM**, equipo participante del Camp:
+
+- Catherine Solarte Godoy
+- Nestor Fabian Lopez Rodriguez
+- Fabricio Salas Guerrero
+
+Se pueden proponer mejoras mediante Issues o Pull Requests, utilizando únicamente ejemplos sintéticos.
 
 ## Licencia y aviso
 
