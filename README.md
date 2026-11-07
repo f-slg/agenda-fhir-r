@@ -6,6 +6,9 @@
 <p align="center"><strong>FHIR TEAM · Prototipo educativo en R y Shiny</strong></p>
 <p align="center">De la disponibilidad a la atención clínica, con recursos HL7 FHIR R4.</p>
 <p align="center">
+  <a href="https://github.com/f-slg/agenda-fhir-r/actions/workflows/pruebas.yaml"><img src="https://github.com/f-slg/agenda-fhir-r/actions/workflows/pruebas.yaml/badge.svg" alt="Pruebas"></a>
+</p>
+<p align="center">
   <a href="#qué-permite-hacer">Funcionalidades</a> ·
   <a href="#ejecutar-localmente">Instalación</a> ·
   <a href="#recorrido-sugerido">Demostración</a> ·
