@@ -14,6 +14,15 @@
 
 ---
 
+> **In English.** *Agenda FHIR* is an educational R/Shiny prototype that links
+> appointment booking, schedule management and the record of a clinical
+> encounter using **HL7 FHIR R4 (4.0.1)** resources (Schedule, Slot,
+> Appointment, Encounter, Observation, Bundle…) on an in-memory repository.
+> It has a patient portal, a scheduler view, a clinical portal and a
+> "FHIR Studio" to inspect JSON, references, transactions, versions and the
+> REST trace. It uses **synthetic data only** and is not a clinical system or a
+> production FHIR server. The interface and documentation are in Spanish.
+
 Prototipo educativo que conecta la reserva de citas, la gestión de agendas y el registro de una atención clínica utilizando recursos **HL7 FHIR R4 (4.0.1)** y un repositorio simulado en memoria.
 
 El paciente, el agendador y el profesional consultan el mismo estado dentro de una sesión de la aplicación. La información puede inspeccionarse como JSON, referencias entre recursos, transacciones e historial.
